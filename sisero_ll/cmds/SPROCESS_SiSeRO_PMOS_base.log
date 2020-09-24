@@ -1,0 +1,1729 @@
+****************************************************************************
+***                          Sentaurus Process                           ***
+***                          Version O-2018.06                           ***
+***                       (1.1029, x86_64, Linux)                        ***
+***                                                                      ***
+***                       Copyright (C) 1993-2002                        ***
+***          The board of regents of the University of Florida           ***
+***                       Copyright (C) 1994-2018                        ***
+***                            Synopsys, Inc.                            ***
+***                                                                      ***
+***  This software and the associated documentation are confidential     ***
+***  and proprietary to Synopsys, Inc.  Your use or disclosure of this   ***
+***  software is subject to the terms and conditions of a written        ***
+***  license agreement between you, or your company, and Synopsys, Inc.  ***
+****************************************************************************
+
+Compiled Thu May  3 06:21:22 PDT 2018 on tcadprod10
+
+      Started at: Thu Sep 24 12:06:08 2020 (-03)
+       User name: msofo
+       Host name: microib.cab.cnea.gov.ar
+             PID: 11495
+    Architecture: x86_64
+Operating system: Linux rel. 3.10.0-1127.8.2.el7.x86_64 ver. #1 SMP Tue May 12 16:57:42 UTC 2020
+
+------------------------------------------------------------------------------
+Checking syntax of cmds/SPROCESS_SiSeRO_PMOS_base.cmd:
+
+Syntax check complete.
+------------------------------------------------------------------------------
+
+Starting Tcl interpreter with inputfile: cmds/SPROCESS_SiSeRO_PMOS_base.cmd
+            sprocess: Checked Out
+
+Loading models file: /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/lib/sprocess-28.0.1029/TclLib/SPROCESS.models... done.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Loading Advanced Calibration 2018.06 (1.1)
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+------------------------------------------------------------- SetTDRList -----
+SetTDRList DopingConcentration
+------------------------------------------------------------------------------
+------------------------------------------------------------------- line -----
+line X location= 0.00e+00<um> spacing= 15.00<nm> tag= "SiTop"
+------------------------------------------------------------------------------
+------------------------------------------------------------------- line -----
+line X location= 0.0500<um> spacing= 25.00<nm>
+------------------------------------------------------------------------------
+------------------------------------------------------------------- line -----
+line X location= 0.250<um> spacing= 50.00<nm>
+------------------------------------------------------------------------------
+------------------------------------------------------------------- line -----
+line X location= 0.500<um> spacing= 100.00<nm>
+------------------------------------------------------------------------------
+------------------------------------------------------------------- line -----
+line X location= 1.00<um> spacing= 250.00<nm>
+------------------------------------------------------------------------------
+------------------------------------------------------------------- line -----
+line X location= 20.00<um> spacing= 250.00<nm> tag= "SiBot"
+------------------------------------------------------------------------------
+------------------------------------------------------------------- line -----
+line Y location= 0.00e+00<um> spacing= 200.00<nm> tag= "SiLef"
+------------------------------------------------------------------------------
+------------------------------------------------------------------- line -----
+line Y location= 23.40<um> spacing= 200.00<nm> tag= "SiRig"
+------------------------------------------------------------------------------
+----------------------------------------------------------------- region -----
+region xlo= "SiTop" xhi= "SiBot" ylo= "SiLef" yhi= "SiRig" Silicon
+------------------------------------------------------------------------------
+------------------------------------------------------------------- init -----
+init field= "Boron" resistivity= 5000.00<ohm-cm> wafer.orient= {100.00}
+------------------------------------------------------------------------------
+          sprocess2d: Checked Out
+
+Creating structure...
+Recreating refinements to take into account updated simulation dimension.
+Done recreating refinements.
+
+
+Points: 91
+Nodes: 91
+Edges: 90
+Faces: 0
+Volumes: 0
+
+------------------------------------------------------------------- grid -----
+grid set.min.normal.size= 3.00<nm> set.normal.growth.ratio.2d= 1.40
+------------------------------------------------------------------------------
+----------------------------------------------------------------- pdbSet -----
+pdbSet grid adaptive 1
+------------------------------------------------------------------------------
+----------------------------------------------------------------- pdbSet -----
+pdbSet grid AdaptiveField Refine.Rel.Error 0.50
+------------------------------------------------------------------------------
+---------------------------------------------------------------- polygon -----
+polygon name= "BCIM_contact" rectangle max= {0.160<um> 12.70<um>} min= {0.140<um> 11.90<um>} xy
+------------------------------------------------------------------------------
+------------------------------------------------------------------ mater -----
+mater add name= "Silicon2" alt.matername= "Silicon" new.like= "Silicon"
+------------------------------------------------------------------------------
+----------------------------------------------------------------- insert -----
+insert polygon= "BCIM_contact" new.material= "Silicon2" new.region= "BCIM_region"
+------------------------------------------------------------------------------
+Increasing dimension 1 -> 2
+Creating structure... 
+Points: 10738
+Nodes: 10738
+Edges: 31797
+Faces: 21060
+Volumes: 0
+
+Copying data...done
+
+Recreating refinements to take into account updated simulation dimension.
+Done recreating refinements.
+
+
+Remeshing to match geometry after insert command ...
+Generating SnMesh mesh... 
+SnMesh time: 0.786248
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    1   2   2   1  27  27   1   2   2  34  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 11839  nTris = 23245  nMats = 2
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -0 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.7)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 468
+bbox  volume: 468
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 0.053166
+Interpolating...elapsed time: 0.09
+------------------------------------------------------------------- mask -----
+mask clear
+------------------------------------------------------------------------------
+------------------------------------------------------------------- mask -----
+mask name= "SCP" left= 0.00e+00<um> right= 2.50<um>
+------------------------------------------------------------------------------
+------------------------------------------------------------------- mask -----
+mask name= "SCP" left= 22.90<um> right= 23.40<um>
+------------------------------------------------------------------------------
+------------------------------------------------------------------- mask -----
+mask name= "SUBIM" left= 3.50<um> right= 10.10<um>
+------------------------------------------------------------------------------
+------------------------------------------------------------------- mask -----
+mask name= "SUBIM" left= 14.50<um> right= 19.40<um>
+------------------------------------------------------------------------------
+------------------------------------------------------------------- mask -----
+mask name= "BCIM" left= 11.10<um> right= 13.50<um>
+------------------------------------------------------------------------------
+------------------------------------------------------------------- mask -----
+mask name= "TRGH" left= 11.90<um> right= 12.70<um>
+------------------------------------------------------------------------------
+------------------------------------------------------------------- mask -----
+mask name= "DEP" left= 11.30<um> right= 13.30<um>
+------------------------------------------------------------------------------
+------------------------------------------------------------------- mask -----
+mask name= "BUR" left= 10.10<um> right= 14.50<um>
+------------------------------------------------------------------------------
+------------------------------------------------------------------- mask -----
+mask name= "GATE_POLY" left= 8.95<um> right= 15.00<um>
+------------------------------------------------------------------------------
+------------------------------------------------------------------- mask -----
+mask name= "SOURCE_METAL" left= 15.10<um> right= 23.40<um>
+------------------------------------------------------------------------------
+------------------------------------------------------------------- mask -----
+mask name= "DRAIN_METAL" left= 2.95<um> right= 7.80<um>
+------------------------------------------------------------------------------
+------------------------------------------------------------------- mask -----
+mask name= "CON_ETCH" left= 15.60<um> right= 18.90<um>
+------------------------------------------------------------------------------
+------------------------------------------------------------------- mask -----
+mask name= "CON_ETCH" left= 4.00<um> right= 7.80<um>
+------------------------------------------------------------------------------
+
+Gas not found in structure, adding.
+Generating SnMesh mesh... 
+SnMesh time: 1.31952
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    4   2   2   1  22  22   1   2   2  33  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 14665  nTris = 28860  nMats = 3
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -0.1 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.7)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 468
+bbox  volume: 470.34
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 0.089348
+Interpolating...elapsed time: 0.08
+---------------------------------------------------------------- deposit -----
+deposit Oxide type= "isotropic" thickness= 0.0300<um>
+------------------------------------------------------------------------------
+MGoals time: 0.661626
+
+Updating sprocess mesh before Etch/Depo relax.
+Generating SnMesh mesh... 
+SnMesh time: 1.60157
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    6   2   1   1  20  20   1   1   2  36  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 16226  nTris = 31951  nMats = 4
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -0.130003 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.7)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 468.702
+bbox  volume: 471.042
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 0.122229
+Interpolating...elapsed time: 0.1
+sprocess ILS thread count = 1
+sprocess parallel assembly thread count = 1
+Mechanics:         0s   to         1s   step    :         1s   temp: 26.9C->26.9C
+---------------------------------------------------------------- deposit -----
+deposit Nitride type= "isotropic" thickness= 0.0200<um>
+------------------------------------------------------------------------------
+MGoals time: 0.771069
+
+Updating sprocess mesh before Etch/Depo relax.
+Generating SnMesh mesh... 
+SnMesh time: 1.6423
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    7   2   1   1  20  20   1   1   2  39  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 16190  nTris = 31888  nMats = 5
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -0.150002 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.7)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 469.17
+bbox  volume: 471.51
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 0.20415
+Interpolating...elapsed time: 0.27
+Mechanics:         0s   to         1s   step    :         1s   temp: 26.9C->26.9C
+------------------------------------------------------------------ photo -----
+photo mask= "SCP" thickness= 1.00<um>
+------------------------------------------------------------------------------
+MGoals time: 1.77595
+
+Remeshing to match geometry after photo command ...
+Generating SnMesh mesh... 
+SnMesh time: 1.88927
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    8   3   2   1  19  19   1   2   3  40  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 17610  nTris = 34722  nMats = 6
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.7)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 489.57
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 0.252184
+Interpolating...elapsed time: 0.31
+---------------------------------------------------------------- implant -----
+implant beam.dose energy= 150.00<keV> dose= 1.00e+14<cm-2> tilt= 7.00<degree> rotation= 0.00e+00<degree> Phosphorus
+------------------------------------------------------------------------------
+No substrate defined (implant).  Skip updateStrain.
+Species           =  Phosphorus
+Dataset           =  Phosphorus
+Energy            = 150keV
+Dose (WaferDose)  =  9.9255e+13/cm2
+BeamDose          =  1e+14/cm2
+BeamDose2D        =  1e+14/cm2
+Tilt              =   7deg
+Tilt2D            =  -0deg
+Rotation          =   0deg
+Slice angle       = -90deg
+Temperature       = 300.00K
+LeftBoundary      =  Extend
+RightBoundary     =  Extend
+
+
+Generating SnMesh mesh... 
+SnMesh time: 9.7957
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    8   7   4   3  10  10   3   4   7  40  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 124.824
+nVerts = 36732  nTris = 72873  nMats = 6
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.7)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 489.57
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 0.432314
+Interpolating...elapsed time: 0.61
+Total implant time:    13.8sec
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Computing finite volumes...
+Finite volumes done
+
+   Dose in:   Silicon_1     Oxide_1   Nitride_1 Photoresist BCIM_region       Total
+                Silicon       Oxide     Nitride Photoresist    Silicon2
+      Boron  5.3402e+09  0.0000e+00  0.0000e+00  0.0000e+00  1.8258e+05  5.3404e+09
+ Phosphorus  1.2412e+13  1.2333e+11  5.2652e+10  8.4343e+13  1.1705e-11  9.6930e+13
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+No substrate defined (implant).  Skip updateStrain.
+------------------------------------------------------------------ strip -----
+strip Photoresist
+------------------------------------------------------------------------------
+MGoals time: 0.151949
+
+Remeshing to match geometry after strip command ...
+Generating SnMesh mesh... 
+SnMesh time: 5.8342
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    4   4   3   2  10  10   2   3   4  25  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 36772  nTris = 72943  nMats = 5
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.7)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 469.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 0.540715
+Interpolating...elapsed time: 0.52
+------------------------------------------------------------------ photo -----
+photo mask= "SUBIM" thickness= 1.00<um>
+------------------------------------------------------------------------------
+MGoals time: 4.49143
+
+Remeshing to match geometry after photo command ...
+Generating SnMesh mesh... 
+SnMesh time: 3.78794
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    5   6   4   2  14  14   3   4   6  37  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 27053  nTris = 53518  nMats = 8
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.7)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 481.07
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 0.48026
+Interpolating...elapsed time: 0.48
+---------------------------------------------------------------- implant -----
+implant beam.dose energy= 40.00<keV> dose= 4.50e+15<cm-2> tilt= 7.00<degree> rotation= 0.00e+00<degree> Boron
+------------------------------------------------------------------------------
+No substrate defined (implant).  Skip updateStrain.
+Species           =  Boron
+Dataset           =  Boron
+Energy            =  40keV
+Dose (WaferDose)  =  4.4665e+15/cm2
+BeamDose          =  4.5e+15/cm2
+BeamDose2D        =  4.5e+15/cm2
+Tilt              =   7deg
+Tilt2D            =  -0deg
+Rotation          =   0deg
+Slice angle       = -90deg
+Temperature       = 300.00K
+LeftBoundary      =  Extend
+RightBoundary     =  Extend
+
+
+Generating SnMesh mesh... 
+SnMesh time: 21.9191
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    5   7   7   4   9   8   4   7   7  37  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 124.824
+nVerts = 67059  nTris = 133393  nMats = 8
+max connectivity (tris per node): 9
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.7)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 481.07
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 0.977592
+Interpolating...elapsed time: 1.05
+Total implant time:    29.4sec
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Computing finite volumes...
+Finite volumes done
+
+   Dose in:   Silicon_1 Photoresist     Oxide_1   Nitride_1 Photoresist Photoresist
+            BCIM_region       Total
+                Silicon Photoresist       Oxide     Nitride Photoresist Photoresist
+               Silicon2
+      Boron  2.0585e+15  7.4308e+14  7.3554e+13  3.2941e+13  6.4828e+14  8.0659e+14
+             1.8258e+05  4.3630e+15
+ Phosphorus  1.2412e+13  0.0000e+00  1.2333e+11  5.2652e+10  0.0000e+00  0.0000e+00
+             1.1705e-11  1.2588e+13
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+No substrate defined (implant).  Skip updateStrain.
+------------------------------------------------------------------ strip -----
+strip Photoresist
+------------------------------------------------------------------------------
+MGoals time: 0.306813
+
+Remeshing to match geometry after strip command ...
+Generating SnMesh mesh... 
+SnMesh time: 10.5186
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    4   4   4   3   8   8   4   4   4  27  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 62490  nTris = 124257  nMats = 5
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.7)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 469.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 1.16862
+Interpolating...elapsed time: 1
+------------------------------------------------------------------ photo -----
+photo mask= "BCIM" thickness= 1.00<um>
+------------------------------------------------------------------------------
+MGoals time: 6.38008
+
+Remeshing to match geometry after photo command ...
+Generating SnMesh mesh... 
+SnMesh time: 7.63943
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    5   5   6   5  11  11   5   6   6  38  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 47831  nTris = 95074  nMats = 7
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.7)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 490.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 1.05644
+Interpolating...elapsed time: 0.86
+---------------------------------------------------------------- implant -----
+implant beam.dose energy= 100.00<keV> dose= 1.30e+12<cm-2> tilt= 7.00<degree> rotation= 0.00e+00<degree> Phosphorus
+------------------------------------------------------------------------------
+No substrate defined (implant).  Skip updateStrain.
+Species           =  Phosphorus
+Dataset           =  Phosphorus
+Energy            = 100keV
+Dose (WaferDose)  =  1.2903e+12/cm2
+BeamDose          =  1.3e+12/cm2
+BeamDose2D        =  1.3e+12/cm2
+Tilt              =   7deg
+Tilt2D            =  -0deg
+Rotation          =   0deg
+Slice angle       = -90deg
+Temperature       = 300.00K
+LeftBoundary      =  Extend
+RightBoundary     =  Extend
+
+
+Generating SnMesh mesh... 
+SnMesh time: 19.238
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    7   6   6   5  10   9   5   6   6  39  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 124.824
+nVerts = 62254  nTris = 123807  nMats = 7
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.625)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 490.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 1.34603
+Interpolating...elapsed time: 1.13
+Total implant time:    28.9sec
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Computing finite volumes...
+Finite volumes done
+
+   Dose in:   Silicon_1 Photoresist     Oxide_1   Nitride_1 Photoresist BCIM_region
+                  Total
+                Silicon Photoresist       Oxide     Nitride Photoresist    Silicon2
+           
+      Boron  2.0595e+15  0.0000e+00  7.3553e+13  3.2941e+13  0.0000e+00  1.8258e+05
+             2.1660e+15
+ Phosphorus  1.2535e+13  5.2946e+11  1.2873e+11  5.4323e+10  5.9376e+11  1.2922e+09
+             1.3843e+13
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+No substrate defined (implant).  Skip updateStrain.
+------------------------------------------------------------------ strip -----
+strip Photoresist
+------------------------------------------------------------------------------
+MGoals time: 0.285007
+
+Remeshing to match geometry after strip command ...
+Generating SnMesh mesh... 
+SnMesh time: 11.0181
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    4   4   5   5   9   9   5   5   4  31  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 62239  nTris = 123778  nMats = 5
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 11.9)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 469.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 1.48062
+Interpolating...elapsed time: 1.03
+------------------------------------------------------------------ photo -----
+photo mask= "TRGH" thickness= 1.00<um>
+------------------------------------------------------------------------------
+MGoals time: 7.72189
+
+Remeshing to match geometry after photo command ...
+Generating SnMesh mesh... 
+SnMesh time: 9.14414
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    5   5   7   5  11  11   6   7   6  37  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 55066  nTris = 109544  nMats = 7
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 11.9)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 491.77
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 1.50797
+Interpolating...elapsed time: 1.03
+---------------------------------------------------------------- implant -----
+implant beam.dose energy= 150.00<keV> dose= 4.00e+11<cm-2> tilt= 7.00<degree> rotation= 0.00e+00<degree> Phosphorus
+------------------------------------------------------------------------------
+No substrate defined (implant).  Skip updateStrain.
+Species           =  Phosphorus
+Dataset           =  Phosphorus
+Energy            = 150keV
+Dose (WaferDose)  =  3.9702e+11/cm2
+BeamDose          =  4e+11/cm2
+BeamDose2D        =  4e+11/cm2
+Tilt              =   7deg
+Tilt2D            =  -0deg
+Rotation          =   0deg
+Slice angle       = -90deg
+Temperature       = 300.00K
+LeftBoundary      =  Extend
+RightBoundary     =  Extend
+
+
+Generating SnMesh mesh... 
+SnMesh time: 25.8231
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    5   6   6   5  10  10   6   6   7  37  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 124.824
+nVerts = 67372  nTris = 134078  nMats = 7
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.7)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 491.77
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 1.69468
+Interpolating...elapsed time: 1.29
+Total implant time:    43.2sec
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Computing finite volumes...
+Finite volumes done
+
+   Dose in:   Silicon_1 Photoresist     Oxide_1   Nitride_1 Photoresist BCIM_region
+                  Total
+                Silicon Photoresist       Oxide     Nitride Photoresist    Silicon2
+           
+      Boron  2.0595e+15  0.0000e+00  7.3553e+13  3.2941e+13  0.0000e+00  1.8258e+05
+             2.1660e+15
+ Phosphorus  1.2547e+13  1.7617e+11  1.2886e+11  5.4380e+10  1.9622e+11  2.8745e+09
+             1.3105e+13
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+No substrate defined (implant).  Skip updateStrain.
+------------------------------------------------------------------ strip -----
+strip Photoresist
+------------------------------------------------------------------------------
+MGoals time: 0.314087
+
+Remeshing to match geometry after strip command ...
+Generating SnMesh mesh... 
+SnMesh time: 10.8195
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    4   4   5   5   9   9   5   5   4  31  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 62782  nTris = 124902  nMats = 5
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 11.9)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 469.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 1.8803
+Interpolating...elapsed time: 1.16
+------------------------------------------------------------------ photo -----
+photo mask= "DEP" thickness= 1.00<um>
+------------------------------------------------------------------------------
+MGoals time: 7.92512
+
+Remeshing to match geometry after photo command ...
+Generating SnMesh mesh... 
+SnMesh time: 9.18438
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    5   5   7   5  11  11   6   7   6  37  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 55394  nTris = 110200  nMats = 7
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 11.9)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 490.57
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 1.70191
+Interpolating...elapsed time: 1.08
+---------------------------------------------------------------- implant -----
+implant beam.dose energy= 180.00<keV> dose= 2.40e+12<cm-2> tilt= 7.00<degree> rotation= 0.00e+00<degree> Phosphorus
+------------------------------------------------------------------------------
+No substrate defined (implant).  Skip updateStrain.
+Species           =  Phosphorus
+Dataset           =  Phosphorus
+Energy            = 180keV
+Dose (WaferDose)  =  2.3821e+12/cm2
+BeamDose          =  2.4e+12/cm2
+BeamDose2D        =  2.4e+12/cm2
+Tilt              =   7deg
+Tilt2D            =  -0deg
+Rotation          =   0deg
+Slice angle       = -90deg
+Temperature       = 300.00K
+LeftBoundary      =  Extend
+RightBoundary     =  Extend
+
+
+Generating SnMesh mesh... 
+SnMesh time: 24.9613
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    5   7   7   5  10   9   5   7   7  37  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 124.824
+nVerts = 68954  nTris = 137248  nMats = 7
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 11.9)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 490.57
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 2.12473
+Interpolating...elapsed time: 1.32
+Total implant time:    38.9sec
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Computing finite volumes...
+Finite volumes done
+
+   Dose in:   Silicon_1 Photoresist     Oxide_1   Nitride_1 Photoresist BCIM_region
+                  Total
+                Silicon Photoresist       Oxide     Nitride Photoresist    Silicon2
+           
+      Boron  2.0595e+15  0.0000e+00  7.3553e+13  3.2941e+13  0.0000e+00  1.8258e+05
+             2.1660e+15
+ Phosphorus  1.2740e+13  1.0086e+12  1.2994e+11  5.4903e+10  1.1305e+12  1.1090e+10
+             1.5076e+13
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+No substrate defined (implant).  Skip updateStrain.
+------------------------------------------------------------------ strip -----
+strip Photoresist
+------------------------------------------------------------------------------
+MGoals time: 0.323313
+
+Remeshing to match geometry after strip command ...
+Generating SnMesh mesh... 
+SnMesh time: 11.1705
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    4   4   5   5   9   9   5   5   5  30  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 65607  nTris = 130556  nMats = 5
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.4)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 469.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 2.22262
+Interpolating...elapsed time: 1.2
+------------------------------------------------------------------ photo -----
+photo mask= "BUR" thickness= 1.00<um>
+------------------------------------------------------------------------------
+MGoals time: 7.64991
+
+Remeshing to match geometry after photo command ...
+Generating SnMesh mesh... 
+SnMesh time: 9.4249
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    5   5   6   5  11  10   5   7   5  36  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 56613  nTris = 112638  nMats = 7
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.4)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 488.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 2.03636
+Interpolating...elapsed time: 1.12
+---------------------------------------------------------------- implant -----
+implant beam.dose energy= 25.00<keV> dose= 5.00e+12<cm-2> tilt= 7.00<degree> rotation= 0.00e+00<degree> Boron
+------------------------------------------------------------------------------
+No substrate defined (implant).  Skip updateStrain.
+Species           =  Boron
+Dataset           =  Boron
+Energy            =  25keV
+Dose (WaferDose)  =  4.9627e+12/cm2
+BeamDose          =  5e+12/cm2
+BeamDose2D        =  5e+12/cm2
+Tilt              =   7deg
+Tilt2D            =  -0deg
+Rotation          =   0deg
+Slice angle       = -90deg
+Temperature       = 300.00K
+LeftBoundary      =  Extend
+RightBoundary     =  Extend
+
+
+Generating SnMesh mesh... 
+SnMesh time: 23.7745
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    5   6   6   6  10   9   6   7   6  37  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 124.824
+nVerts = 74724  nTris = 148774  nMats = 7
+max connectivity (tris per node): 9
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.65)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 488.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 2.74234
+Interpolating...elapsed time: 1.44
+Total implant time:      34sec
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Computing finite volumes...
+Finite volumes done
+
+   Dose in:   Silicon_1 Photoresist     Oxide_1   Nitride_1 Photoresist BCIM_region
+                  Total
+                Silicon Photoresist       Oxide     Nitride Photoresist    Silicon2
+           
+      Boron  2.0602e+15  1.8196e+12  7.3667e+13  3.2988e+13  2.0668e+12  1.9801e+08
+             2.1707e+15
+ Phosphorus  1.2740e+13  0.0000e+00  1.2994e+11  5.4901e+10  0.0000e+00  1.1090e+10
+             1.2936e+13
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+No substrate defined (implant).  Skip updateStrain.
+------------------------------------------------------------------ strip -----
+strip Photoresist
+------------------------------------------------------------------------------
+MGoals time: 0.346916
+
+Remeshing to match geometry after strip command ...
+Generating SnMesh mesh... 
+SnMesh time: 11.2208
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    4   5   5   4   9   9   5   5   5  31  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 63767  nTris = 126862  nMats = 5
+max connectivity (tris per node): 9
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.4)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 469.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 2.56752
+Interpolating...elapsed time: 1.34
+---------------------------------------------------------------- diffuse -----
+diffuse time= 20.00<min> temperature= 900.00<C>
+------------------------------------------------------------------------------
+---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---
+Anneal step:	
+	Time        = 20min
+	Temperature = 900.0C
+	Ramp rate   = 0C/s
+Mechanics:         0s   to    0.0001s   step    :    0.0001s   temp: 900.0C
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --
+Initializing:  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --
+Initialization is done.
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --
+Diffusion:         0s   to    0.0001s   step (s):    0.0001s   temp: 900.0C
+Mechanics:    0.0001s   to 0.0001933s   step    : 9.332e-05s   temp: 900.0C
+Diffusion:    0.0001s   to 0.0001933s   step (s): 9.332e-05s   temp: 900.0C
+Mechanics: 0.0001933s   to 0.0003398s   step    : 0.0001465s   temp: 900.0C
+Diffusion: 0.0001933s   to 0.0003398s   step (s): 0.0001465s   temp: 900.0C
+Mechanics: 0.0003398s   to 0.0006287s   step    : 0.0002889s   temp: 900.0C
+Diffusion: 0.0003398s   to 0.0006287s   step (s): 0.0002889s   temp: 900.0C
+
+Adaptive check...
+Requires remesh.
+
+Generating SnMesh mesh... 
+SnMesh time: 14.9394
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    4   5   6   7   9   9   8   6   5  35  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 75638  nTris = 150652  nMats = 5
+max connectivity (tris per node): 8
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.7)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 469.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 3.95029
+Interpolating...elapsed time: 1.7
+Mechanics: 0.0006287s   to  0.001201s   step    : 0.0005725s   temp: 900.0C
+Diffusion: 0.0006287s   to  0.001201s   step (s): 0.0005725s   temp: 900.0C
+Mechanics:  0.001201s   to  0.002329s   step    :  0.001128s   temp: 900.0C
+Diffusion:  0.001201s   to  0.002329s   step (s):  0.001128s   temp: 900.0C
+Mechanics:  0.002329s   to  0.004585s   step    :  0.002256s   temp: 900.0C
+Diffusion:  0.002329s   to  0.004585s   step (s):  0.002256s   temp: 900.0C
+Mechanics:  0.004585s   to  0.009096s   step    :  0.004512s   temp: 900.0C
+Diffusion:  0.004585s   to  0.009096s   step (s):  0.004512s   temp: 900.0C
+
+Adaptive check...
+No remesh required.
+
+Mechanics:  0.009096s   to   0.01738s   step    :  0.008284s   temp: 900.0C
+Diffusion:  0.009096s   to   0.01738s   step (s):  0.008284s   temp: 900.0C
+Mechanics:   0.01738s   to   0.02685s   step    :  0.009466s   temp: 900.0C
+Diffusion:   0.01738s   to   0.02685s   step (s):  0.009466s   temp: 900.0C
+Mechanics:   0.02685s   to   0.03725s   step    :    0.0104s   temp: 900.0C
+Diffusion:   0.02685s   to   0.03725s   step (s):    0.0104s   temp: 900.0C
+Mechanics:   0.03725s   to   0.05006s   step    :    0.0128s   temp: 900.0C
+Diffusion:   0.03725s   to   0.05006s   step (s):    0.0128s   temp: 900.0C
+
+Adaptive check...
+No remesh required.
+
+Mechanics:   0.05006s   to   0.06657s   step    :   0.01652s   temp: 900.0C
+Diffusion:   0.05006s   to   0.06657s   step (s):   0.01652s   temp: 900.0C
+Mechanics:   0.06657s   to   0.08873s   step    :   0.02216s   temp: 900.0C
+Diffusion:   0.06657s   to   0.08873s   step (s):   0.02216s   temp: 900.0C
+Mechanics:   0.08873s   to     0.119s   step    :   0.03026s   temp: 900.0C
+Diffusion:   0.08873s   to     0.119s   step (s):   0.03026s   temp: 900.0C
+Mechanics:     0.119s   to    0.1618s   step    :   0.04284s   temp: 900.0C
+Diffusion:     0.119s   to    0.1618s   step (s):   0.04284s   temp: 900.0C
+
+Adaptive check...
+Requires remesh.
+
+Generating SnMesh mesh... 
+SnMesh time: 16.7279
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    4   4   5   9   9   9   9   6   4  36  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 80627  nTris = 160618  nMats = 5
+max connectivity (tris per node): 9
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.7)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 469.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 4.49469
+Interpolating...elapsed time: 1.95
+Mechanics:    0.1618s   to    0.2227s   step    :   0.06088s   temp: 900.0C
+Diffusion:    0.1618s   to    0.2227s   step (s):   0.06088s   temp: 900.0C
+Mechanics:    0.2227s   to    0.3039s   step    :   0.08123s   temp: 900.0C
+Diffusion:    0.2227s   to    0.3039s   step (s):   0.08123s   temp: 900.0C
+Mechanics:    0.3039s   to    0.4253s   step    :    0.1214s   temp: 900.0C
+Diffusion:    0.3039s   to    0.4253s   step (s):    0.1214s   temp: 900.0C
+Mechanics:    0.4253s   to    0.5924s   step    :    0.1671s   temp: 900.0C
+Diffusion:    0.4253s   to    0.5924s   step (s):    0.1671s   temp: 900.0C
+
+Adaptive check...
+No remesh required.
+
+Mechanics:    0.5924s   to    0.8173s   step    :    0.2249s   temp: 900.0C
+Diffusion:    0.5924s   to    0.8173s   step (s):    0.2249s   temp: 900.0C
+Mechanics:    0.8173s   to     1.091s   step    :    0.2737s   temp: 900.0C
+Diffusion:    0.8173s   to     1.091s   step (s):    0.2737s   temp: 900.0C
+Mechanics:     1.091s   to      1.41s   step    :    0.3191s   temp: 900.0C
+Diffusion:     1.091s   to      1.41s   step (s):    0.3191s   temp: 900.0C
+Mechanics:      1.41s   to     1.859s   step    :    0.4488s   temp: 900.0C
+Diffusion:      1.41s   to     1.859s   step (s):    0.4488s   temp: 900.0C
+
+Adaptive check...
+No remesh required.
+
+Mechanics:     1.859s   to     2.481s   step    :    0.6222s   temp: 900.0C
+Diffusion:     1.859s   to     2.481s   step (s):    0.6222s   temp: 900.0C
+Mechanics:     2.481s   to     3.262s   step    :    0.7813s   temp: 900.0C
+Diffusion:     2.481s   to     3.262s   step (s):    0.7813s   temp: 900.0C
+Mechanics:     3.262s   to     4.234s   step    :    0.9716s   temp: 900.0C
+Diffusion:     3.262s   to     4.234s   step (s):    0.9716s   temp: 900.0C
+Mechanics:     4.234s   to     5.426s   step    :     1.192s   temp: 900.0C
+Diffusion:     4.234s   to     5.426s   step (s):     1.192s   temp: 900.0C
+
+Adaptive check...
+Requires remesh.
+
+Generating SnMesh mesh... 
+SnMesh time: 16.9352
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    5   4   6   7  10  10   7   6   4  36  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 122.779
+nVerts = 83024  nTris = 165454  nMats = 5
+max connectivity (tris per node): 9
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.7)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 469.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 5.14223
+Interpolating...elapsed time: 2.12
+Mechanics:     5.426s   to     6.775s   step    :      1.35s   temp: 900.0C
+Diffusion:     5.426s   to     6.775s   step (s):      1.35s   temp: 900.0C
+Mechanics:     6.775s   to     8.355s   step    :      1.58s   temp: 900.0C
+Diffusion:     6.775s   to     8.355s   step (s):      1.58s   temp: 900.0C
+Mechanics:     8.355s   to     10.49s   step    :     2.134s   temp: 900.0C
+Diffusion:     8.355s   to     10.49s   step (s):     2.134s   temp: 900.0C
+Mechanics:     10.49s   to     12.77s   step    :     2.277s   temp: 900.0C
+Diffusion:     10.49s   to     12.77s   step (s):     2.277s   temp: 900.0C
+
+Adaptive check...
+Requires remesh.
+
+Generating SnMesh mesh... 
+SnMesh time: 17.9215
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    5   5   7   6   9   9   7   7   5  36  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.121
+nVerts = 83861  nTris = 167141  nMats = 5
+max connectivity (tris per node): 9
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.625)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 469.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 5.66737
+Interpolating...elapsed time: 2.14
+Mechanics:     12.77s   to     15.27s   step    :     2.499s   temp: 900.0C
+Diffusion:     12.77s   to     15.27s   step (s):     2.499s   temp: 900.0C
+Mechanics:     15.27s   to     18.35s   step    :     3.086s   temp: 900.0C
+Diffusion:     15.27s   to     18.35s   step (s):     3.086s   temp: 900.0C
+Mechanics:     18.35s   to      22.7s   step    :     4.344s   temp: 900.0C
+Diffusion:     18.35s   to      22.7s   step (s):     4.344s   temp: 900.0C
+Mechanics:      22.7s   to     28.01s   step    :      5.31s   temp: 900.0C
+Diffusion:      22.7s   to     28.01s   step (s):      5.31s   temp: 900.0C
+
+Adaptive check...
+Requires remesh.
+
+Generating SnMesh mesh... 
+SnMesh time: 18.6733
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    5   4   7   6   9   9   7   7   5  36  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 88373  nTris = 176158  nMats = 5
+max connectivity (tris per node): 9
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.5)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 469.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 5.98972
+Interpolating...elapsed time: 2.2
+Mechanics:     28.01s   to     34.86s   step    :     6.852s   temp: 900.0C
+Diffusion:     28.01s   to     34.86s   step (s):     6.852s   temp: 900.0C
+Mechanics:     34.86s   to     42.58s   step    :     7.722s   temp: 900.0C
+Diffusion:     34.86s   to     42.58s   step (s):     7.722s   temp: 900.0C
+Mechanics:     42.58s   to     51.86s   step    :     9.284s   temp: 900.0C
+Diffusion:     42.58s   to     51.86s   step (s):     9.284s   temp: 900.0C
+Mechanics:     51.86s   to     59.96s   step    :     8.099s   temp: 900.0C
+Diffusion:     51.86s   to     59.96s   step (s):     8.099s   temp: 900.0C
+Diffusion:     51.86s   to     53.89s   step*(s):     2.025s   temp: 900.0C
+
+Adaptive check...
+Requires remesh.
+
+Generating SnMesh mesh... 
+SnMesh time: 19.468
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    4   6   8   6   8   8   6   8   6  35  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.142
+nVerts = 98178  nTris = 195773  nMats = 5
+max connectivity (tris per node): 9
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.7)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 469.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 7.25492
+Interpolating...elapsed time: 2.38
+Diffusion:     53.89s   to     55.76s   step (s):     1.868s   temp: 900.0C
+Diffusion:     55.76s   to     58.17s   step (s):     2.418s   temp: 900.0C
+Diffusion:     58.17s   to     59.96s   step (r):     1.789s   temp: 900.0C
+Mechanics:     59.96s   to     1.038min step    :     2.336s   temp: 900.0C
+Diffusion:     59.96s   to     1.038min step (s):     2.336s   temp: 900.0C
+
+Adaptive check...
+No remesh required.
+
+Mechanics:     1.038min to     1.076min step    :      2.24s   temp: 900.0C
+Diffusion:     1.038min to     1.076min step (s):      2.24s   temp: 900.0C
+Mechanics:     1.076min to     1.121min step    :     2.704s   temp: 900.0C
+Diffusion:     1.076min to     1.121min step (s):     2.704s   temp: 900.0C
+Mechanics:     1.121min to     1.185min step    :     3.835s   temp: 900.0C
+Diffusion:     1.121min to     1.185min step (s):     3.835s   temp: 900.0C
+Mechanics:     1.185min to     1.312min step    :      7.67s   temp: 900.0C
+Diffusion:     1.185min to     1.312min step (s):      7.67s   temp: 900.0C
+
+Adaptive check...
+No remesh required.
+
+Mechanics:     1.312min to     1.555min step    :     14.58s   temp: 900.0C
+Diffusion:     1.312min to     1.555min step (s):     14.58s   temp: 900.0C
+Mechanics:     1.555min to     1.983min step    :     25.67s   temp: 900.0C
+Diffusion:     1.555min to     1.983min step (s):     25.67s   temp: 900.0C
+Mechanics:     1.983min to     2.697min step    :     42.84s   temp: 900.0C
+Diffusion:     1.983min to     2.697min step (s):     42.84s   temp: 900.0C
+Mechanics:     2.697min to     3.407min step    :     42.56s   temp: 900.0C
+Diffusion:     2.697min to     3.407min step (s):     42.56s   temp: 900.0C
+
+Adaptive check...
+Requires remesh.
+
+Generating SnMesh mesh... 
+SnMesh time: 15.3412
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    4   5   6   6  10   9   7   7   5  35  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 122.779
+nVerts = 76328  nTris = 152079  nMats = 5
+max connectivity (tris per node): 9
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 11.9)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 469.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 5.88381
+Interpolating...elapsed time: 2.16
+Mechanics:     3.407min to     4.277min step    :     52.23s   temp: 900.0C
+Diffusion:     3.407min to     4.277min step (s):     52.23s   temp: 900.0C
+Mechanics:     4.277min to     5.333min step    :     1.056min temp: 900.0C
+Diffusion:     4.277min to     5.333min step (s):     1.056min temp: 900.0C
+Mechanics:     5.333min to     6.602min step    :     1.269min temp: 900.0C
+Diffusion:     5.333min to     6.602min step (s):     1.269min temp: 900.0C
+Mechanics:     6.602min to     8.169min step    :     1.567min temp: 900.0C
+Diffusion:     6.602min to     8.169min step (s):     1.567min temp: 900.0C
+
+Adaptive check...
+Requires remesh.
+
+Generating SnMesh mesh... 
+SnMesh time: 15.2981
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    4   5   6   8   9   9   8   6   5  35  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 122.779
+nVerts = 76179  nTris = 151780  nMats = 5
+max connectivity (tris per node): 9
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 11.9)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 469.17
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 6.33199
+Interpolating...elapsed time: 1.85
+Mechanics:     8.169min to     10.14min step    :     1.975min temp: 900.0C
+Diffusion:     8.169min to     10.14min step (s):     1.975min temp: 900.0C
+Mechanics:     10.14min to     12.34min step    :     2.201min temp: 900.0C
+Diffusion:     10.14min to     12.34min step (s):     2.201min temp: 900.0C
+Mechanics:     12.34min to     15.55min step    :     3.202min temp: 900.0C
+Diffusion:     12.34min to     15.55min step (s):     3.202min temp: 900.0C
+Mechanics:     15.55min to        20min step    :     4.454min temp: 900.0C
+Diffusion:     15.55min to        20min step (s):     4.454min temp: 900.0C
+
+Adaptive check...
+No remesh required.
+
+
+Elapsed time for diffuse 1.4161e+03s
+---------------------------------------------------------------- deposit -----
+deposit PolySilicon type= "isotropic" thickness= 0.500<um>
+------------------------------------------------------------------------------
+
+MGoals time: 4.70516
+
+Updating sprocess mesh before Etch/Depo relax.
+Generating SnMesh mesh... 
+SnMesh time: 16.1225
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    5   6   6   6   9   9   7   6   6  36  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.121
+nVerts = 79548  nTris = 158448  nMats = 6
+max connectivity (tris per node): 9
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.1)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 480.87
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 6.10147
+Interpolating...elapsed time: 1.77
+Mechanics:         0s   to         1s   step    :         1s   temp: 26.9C->26.9C
+
+---------------------------------------------------------------- implant -----
+implant beam.dose energy= 40.00<keV> dose= 5.00e+15<cm-2> tilt= 7.00<degree> rotation= 0.00e+00<degree> Arsenic
+------------------------------------------------------------------------------
+No substrate defined (implant).  Skip updateStrain.
+Species           =  Arsenic
+Dataset           =  Arsenic
+Energy            =  40keV
+Dose (WaferDose)  =  4.9627e+15/cm2
+BeamDose          =  5e+15/cm2
+BeamDose2D        =  5e+15/cm2
+Tilt              =   7deg
+Tilt2D            =  -0deg
+Rotation          =   0deg
+Slice angle       = -90deg
+Temperature       = 300.00K
+LeftBoundary      =  Extend
+RightBoundary     =  Extend
+
+
+Generating SnMesh mesh... 
+SnMesh time: 28.1629
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    9   5   5   5   8   8   6   5   5  41  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.121
+nVerts = 91453  nTris = 182114  nMats = 6
+max connectivity (tris per node): 9
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.1)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 480.87
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 6.20491
+Interpolating...elapsed time: 1.99
+Total implant time:    41.8sec
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Computing finite volumes...
+Finite volumes done
+
+   Dose in:   Silicon_1     Oxide_1 PolySilicon   Nitride_1 BCIM_region Oxide_1+Sil
+                  Total
+                Silicon       Oxide PolySilicon     Nitride    Silicon2 Oxide_Silic
+           
+      Boron  8.1991e+14  2.0375e+14  0.0000e+00  3.3493e+13  1.0550e+09  4.3287e+13
+             1.1004e+15
+ Phosphorus  1.2285e+13  1.2507e+11  0.0000e+00  5.1661e+10  1.0662e+10  3.5720e+11
+             1.2830e+13
+    Arsenic  2.9567e-08  4.4370e-11  4.8831e+15  2.9579e-11  1.0244e-12  0.0000e+00
+             4.8831e+15
+        Int  2.3557e+08  3.0000e+01  0.0000e+00  2.0000e+01  5.5176e+03  1.0000e+05
+             2.3578e+08
+        Vac  1.8889e+11  3.0000e+01  0.0000e+00  2.0000e+01  9.1296e+06  1.0000e+05
+             1.8889e+11
+   ICluster  1.4035e+07  0.0000e+00  0.0000e+00  0.0000e+00  2.2055e+02  1.0000e+05
+             1.4242e+07
+     P2trap  1.9999e+04  3.0000e+01  0.0000e+00  2.0000e+01  6.8376e-01  9.4574e+09
+             9.4575e+09
+         B4  2.6454e+14  3.0000e+01  0.0000e+00  2.0000e+01  5.0021e-08  1.0000e+05
+             2.6454e+14
+         P3  1.4174e+03  3.0000e+01  0.0000e+00  2.0000e+01  8.9655e-04  1.0000e+05
+             2.0848e+05
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+No substrate defined (implant).  Skip updateStrain.
+------------------------------------------------------------------- etch -----
+etch mask= "GATE_POLY" PolySilicon type= "anisotropic" thickness= 0.510<um>
+------------------------------------------------------------------------------
+MGoals time: 5.87362
+
+Updating sprocess mesh before Etch/Depo relax.
+Generating SnMesh mesh... 
+SnMesh time: 23.0479
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    5   5   5   5   8   7   5   5   5  32  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.121
+nVerts = 98112  nTris = 195464  nMats = 6
+max connectivity (tris per node): 9
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.1)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 472.195
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 6.98648
+Interpolating...elapsed time: 1.95
+Mechanics:         0s   to         1s   step    :         1s   temp: 26.9C->26.9C
+
+------------------------------------------------------------------- mask -----
+mask name= "CON_ETCH" negative
+------------------------------------------------------------------------------
+------------------------------------------------------------------- mask -----
+mask name= "SOURCE_METAL" negative
+------------------------------------------------------------------------------
+------------------------------------------------------------------- mask -----
+mask name= "DRAIN_METAL" negative
+------------------------------------------------------------------------------
+------------------------------------------------------------------- etch -----
+etch mask= "CON_ETCH" Nitride type= "anisotropic" thickness= 0.0500<um>
+------------------------------------------------------------------------------
+MGoals time: 5.92257
+
+Updating sprocess mesh before Etch/Depo relax.
+Generating SnMesh mesh... 
+SnMesh time: 18.9749
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    6   6   5   6   9   8   6   5   6  37  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.121
+nVerts = 86020  nTris = 171460  nMats = 8
+max connectivity (tris per node): 9
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.1)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 472.053
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 7.28117
+Interpolating...elapsed time: 1.94
+Mechanics:         0s   to         1s   step    :         1s   temp: 26.9C->26.9C
+
+------------------------------------------------------------------- etch -----
+etch mask= "CON_ETCH" Oxide type= "anisotropic" thickness= 0.0500<um>
+------------------------------------------------------------------------------
+MGoals time: 5.3237
+
+Updating sprocess mesh before Etch/Depo relax.
+Generating SnMesh mesh... 
+SnMesh time: 19.7553
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    6   6   5   6   8   8   6   6   6  36  .   .   .                     
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 123.121
+nVerts = 91186  nTris = 181792  nMats = 10
+max connectivity (tris per node): 9
+bmin: 20 0
+bmax: -1.15 23.4
+min edgeLength: 0.000466725  [near (0.160233 12.1)]
+min volume: 3.64629e-07  max volume: 0.025  Total volume: 471.84
+bbox  volume: 494.91
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 7.63084
+Interpolating...elapsed time: 2.06
+Mechanics:         0s   to         1s   step    :         1s   temp: 26.9C->26.9C
+
+---------------------------------------------------------------- deposit -----
+deposit Aluminum type= "anisotropic" thickness= 0.500<um> mask= "SOURCE_METAL"
+------------------------------------------------------------------------------
+MGoals time: 8.85742
+
+Updating sprocess mesh before Etch/Depo relax.
+Generating SnMesh mesh... 
+SnMesh time: 19.2588
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    6   6   6   6   8   8   6   6   6  37  .   .   .                   . 
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 176.13
+nVerts = 91151  nTris = 181715  nMats = 11
+max connectivity (tris per node): 9
+bmin: 20 0
+bmax: -1.15005 23.4
+min edgeLength: 0.000130445  [near (-0.550259 23.3999)]
+min volume: 1.69089e-08  max volume: 0.025  Total volume: 475.99
+bbox  volume: 494.911
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 7.93538
+Interpolating...elapsed time: 2.35
+Mechanics:         0s   to         1s   step    :         1s   temp: 26.9C->26.9C
+---------------------------------------------------------------- deposit -----
+deposit Aluminum type= "anisotropic" thickness= 0.500<um> mask= "DRAIN_METAL"
+------------------------------------------------------------------------------
+MGoals time: 8.86338
+
+Updating sprocess mesh before Etch/Depo relax.
+Generating SnMesh mesh... 
+SnMesh time: 19.3216
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    6   6   6   6   8   8   6   6   6  37  .   .   .       .           . 
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 176.127
+nVerts = 91315  nTris = 182043  nMats = 12
+max connectivity (tris per node): 13
+bmin: 20 0
+bmax: -1.15031 23.4
+min edgeLength: 0.000130445  [near (-0.550259 23.3999)]
+min volume: 1.69089e-08  max volume: 0.025  Total volume: 478.415
+bbox  volume: 494.917
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 8.06111
+Interpolating...elapsed time: 2.43
+Mechanics:         0s   to         1s   step    :         1s   temp: 26.9C->26.9C
+---------------------------------------------------------------- contact -----
+contact Aluminum name= "source" xlo= -0.600<um> xhi= -0.500<um> ylo= 15.20<um> yhi= 23.30<um> box add
+------------------------------------------------------------------------------
+---------------------------------------------------------------- contact -----
+contact Aluminum name= "drain" xlo= -0.600<um> xhi= -0.500<um> ylo= 3.05<um> yhi= 7.70<um> box add
+------------------------------------------------------------------------------
+---------------------------------------------------------------- contact -----
+contact PolySilicon name= "gate" xlo= -0.600<um> xhi= -0.500<um> ylo= 9.05<um> yhi= 14.90<um> box add
+------------------------------------------------------------------------------
+---------------------------------------------------------------- contact -----
+contact Silicon name= "chargeflow" xlo= 0.0500<um> xhi= 0.250<um> ylo= 11.80<um> yhi= 12.80<um> box add
+------------------------------------------------------------------------------
+---------------------------------------------------------------- contact -----
+contact Silicon name= "substrate" xlo= 4.90<um> xhi= 5.10<um> ylo= 0.100<um> yhi= 23.50<um> box add
+------------------------------------------------------------------------------
+----------------------------------------------------------------- struct -----
+struct tdr= "Loadable"
+------------------------------------------------------------------------------
+Interpolating...elapsed time: 1.48
+Points: 91318
+Nodes: 97826
+Edges: 279838
+Faces: 182049
+Volumes: 0
+
+[1m
+** Warning **
+[0mNo coordinate system has been set. Default coordinate system is coord.ucs. Using default value. !
+
+ ... continuing execution
+
+Writing file Loadable_fps.tdr...done
+
+------------------------------------------------------------------- grid -----
+grid remesh
+------------------------------------------------------------------------------
+Generating SnMesh mesh... 
+SnMesh time: 20.2804
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    6   6   6   6   8   8   6   6   6  37  .   .   .       .           . 
+---------------------------------------------------------------------------------
+minAngle: 0.133707  maxAngle: 176.127
+nVerts = 91306  nTris = 182025  nMats = 12
+max connectivity (tris per node): 13
+bmin: 20 0
+bmax: -1.15031 23.4
+min edgeLength: 0.000130445  [near (-0.550259 23.3999)]
+min volume: 1.69089e-08  max volume: 0.025  Total volume: 478.415
+bbox  volume: 494.917
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 9.0018
+Interpolating...elapsed time: 2.18
+-------------------------------------------------------------- refinebox -----
+refinebox clear
+------------------------------------------------------------------------------
+------------------------------------------------------------------- line -----
+line clear
+------------------------------------------------------------------------------
+------------------------------------------------------------------- grid -----
+grid set.Delaunay.type= "boxmethod"
+------------------------------------------------------------------------------
+-------------------------------------------------------------- refinebox -----
+refinebox Silicon Adaptive refine.max.edge= {50.00<nm>} max.asinhdiff= {NetActive= 0.500} refine.fields= {NetActive}
+------------------------------------------------------------------------------
+-------------------------------------------------------------- refinebox -----
+refinebox Silicon2 Adaptive refine.max.edge= {50.00<nm>} max.asinhdiff= {NetActive= 0.500} refine.fields= {NetActive}
+------------------------------------------------------------------------------
+-------------------------------------------------------------- refinebox -----
+refinebox Silicon min= {0.00e+00<um> 10.10<um>} max= {0.300<um> 14.50<um>} xrefine= {0.0100<um> 0.0100<um> 0.0100<um>} yrefine= {0.0100<um> 0.0100<um> 0.0100<um>}
+------------------------------------------------------------------------------
+-------------------------------------------------------------- refinebox -----
+refinebox Silicon2 min= {0.00e+00<um> 10.10<um>} max= {0.300<um> 14.50<um>} xrefine= {0.0100<um> 0.0100<um> 0.0100<um>} yrefine= {0.0100<um> 0.0100<um> 0.0100<um>}
+------------------------------------------------------------------------------
+------------------------------------------------------------------- grid -----
+grid remesh
+------------------------------------------------------------------------------
+           NetActive   5.000e-01   1.000e+10   1.000e+37   1.000e+37   5.000e-01   1.000e+37  -1.000e+00
+              Damage   1.000e+03   1.000e+19   1.000e+37   1.000e+37   1.000e+37   1.000e+37  -1.000e+00
+  Interval Refinement criteria:
+             species      tgt ln  tgt ln scl     min val      mx val
+              Damage   2.000e-07   1.000e+00   1.150e+22   1.150e+22
+           NetActive   5.000e-01   1.000e+10   1.000e+37   1.000e+37   5.000e-01   1.000e+37  -1.000e+00
+              Damage   1.000e+03   1.000e+19   1.000e+37   1.000e+37   1.000e+37   1.000e+37  -1.000e+00
+  Interval Refinement criteria:
+             species      tgt ln  tgt ln scl     min val      mx val
+              Damage   2.000e-07   1.000e+00   1.150e+22   1.150e+22
+Generating SnMesh mesh... 
+SnMesh time: 19.095
+
+========================  tri-grid quality (Gas excluded)  =======================
+    0  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160 170 180
+ %    1   4  13   2  13  13   3  13   4  33  .   .   .       .           . 
+---------------------------------------------------------------------------------
+minAngle: 0.248704  maxAngle: 176.225
+nVerts = 165406  nTris = 329552  nMats = 12
+max connectivity (tris per node): 12
+bmin: 20 0
+bmax: -1.15031 23.4
+min edgeLength: 0.000130445  [near (-0.550259 23.3999)]
+min volume: 1.69089e-08  max volume: 0.120829  Total volume: 478.415
+bbox  volume: 494.917
+Are all boundaries on bbox? true
+=================================================================================
+
+Smallest region: BCIM_region  Total volume: 0.016
+Initializing sprocess...time: 22.0314
+Interpolating...elapsed time: 4.53
+
+Turning off restart capability for Full_remesh_fps.tdr (requires gas and interfaces)
+----------------------------------------------------------------- struct -----
+struct tdr= "Full_remesh" !Gas
+------------------------------------------------------------------------------
+Interpolating...elapsed time: 2.49
+Points: 165412
+Nodes: 170564
+Edges: 500091
+Faces: 329564
+Volumes: 0
+
+[1m
+** Warning **
+[0mNo coordinate system has been set. Default coordinate system is coord.ucs. Using default value. !
+
+ ... continuing execution
+
+Writing file Full_remesh_fps.tdr...done
+
+------------------------------------------------------------------------------
+Summary:
+Anneal time stepping:
+  reaction/mechanics steps=57 minimum=1.0000e+38s maximum=1.0000e+38s
+  diffusion steps=61 minimum=9.3318e-05s maximum=2.6726e+02s
+Edge/Face swapping:
+ calls=105 flips=0
+------------------------------------------------------------------------------
+License features used:
+    sprocess
+    sprocess2d
+------------------------------------------------------------------------------
+
+Elapsed Time:	00:36:48
+User Time:	00:36:48
+CPU Time:	00:36:29
+
+Detailed CPU time report:
+
+721.00 sec (32.7%) Solver(PDE). (641 calls).
+551.73 sec (25.0%) SnMesh meshing (40 calls).
+176.78 sec (8.0%) Diffusion step time. (57 calls).
+154.44 sec (7.0%) Store nodal values: Serial. (5284 calls).
+148.69 sec (6.7%) Transfer from mesher 1D/2D (39 calls).
+78.64 sec (3.6%) mgoals (20 calls).
+68.13 sec (3.1%) Serial mode assembly. (884 calls).
+57.78 sec (2.6%) Bulk Interpolation (41 calls).
+54.57 sec (2.5%) implant command (298 calls).
+32.17 sec (1.5%) Mechanics step (57 calls).
+30.01 sec (1.4%) FieldServer copy (43 calls).
+26.09 sec (1.2%) Mechanics assembly (serial mode) (65 calls).
+22.47 sec (1.0%) Solver(Mechanics) (65 calls).
+
+Detailed elapsed time report:
+
+721.06 sec (32.7%) Solver(PDE). (641 calls).
+551.78 sec (25.0%) SnMesh meshing (40 calls).
+176.80 sec (8.0%) Diffusion step time. (57 calls).
+154.45 sec (7.0%) Store nodal values: Serial. (5284 calls).
+148.70 sec (6.7%) Transfer from mesher 1D/2D (39 calls).
+78.65 sec (3.6%) mgoals (20 calls).
+68.14 sec (3.1%) Serial mode assembly. (884 calls).
+57.78 sec (2.6%) Bulk Interpolation (41 calls).
+54.56 sec (2.5%) implant command (298 calls).
+32.17 sec (1.5%) Mechanics step (57 calls).
+30.02 sec (1.4%) FieldServer copy (43 calls).
+26.09 sec (1.2%) Mechanics assembly (serial mode) (65 calls).
+22.48 sec (1.0%) Solver(Mechanics) (65 calls).
+
+Simulation completed with 1 warning.
+================================================
+
+WARNING 1 2 times
+=======================================================
+No coordinate system has been set. Default coordinate system is coord.ucs. Using default value.
+

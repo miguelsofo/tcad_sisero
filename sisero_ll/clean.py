@@ -1,0 +1,9 @@
+import os
+os.system('rm cmds/*.log')
+os.system('rm currents/*')
+os.system('rm savs/*')
+os.system('rm logs/*')
+os.system('rm plts/*')
+os.system('rm out_svisual/*')
+os.system('rm *.BAK')
+os.system('rm *.png')
