@@ -1,0 +1,21 @@
+###########################################
+# Sentaurus Visual O-2018.06.
+# Tcl log file.
+#------------------------------------------
+# Date: oct. 02, 2020. 16:24:03.
+# Version: 28.0.1030 (1.1030)
+# Mode: Batch X.
+# Mesa: enabled.
+# Hostname: microib.cab.cnea.gov.ar.
+# Machine: Linux, x86_64, x86_64.
+# Kernel: 3.10.0-1127.8.2.el7.x86_64.
+###########################################
+
+load_script_file /home/msofo/tcad_sisero/sisero_ll/cmds_svisual/svisual_pmos_TC.tcl
+cd /home/msofo/tcad_sisero/sisero_ll/cmds_svisual
+  load_file ../currents/SiSeRO_TC_des.plt
+#--> SiSeRO_TC_des
+  export_variables -dataset SiSeRO_TC_des -filename ../out_svisual/pmos_TC_iv.csv -overwrite
+#--> ../out_svisual/pmos_TC_iv.csv
+#-> 0
+ 
