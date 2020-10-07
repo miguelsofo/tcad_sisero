@@ -7,4 +7,5 @@ import os
 #os.system('rm out_svisual/*')
 os.system('rm *.BAK')
 os.system('rm cmds_svisual/*.log')
+os.system('rm cmds_svisual/*.BAK')
 #os.system('rm *.png')

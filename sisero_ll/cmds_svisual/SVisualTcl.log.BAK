@@ -2,7 +2,7 @@
 # Sentaurus Visual O-2018.06.
 # Tcl log file.
 #------------------------------------------
-# Date: oct. 05, 2020. 11:55:50.
+# Date: oct. 07, 2020. 18:07:43.
 # Version: 28.0.1030 (1.1030)
 # Mode: Batch X.
 # Mesa: enabled.
@@ -13,6 +13,5 @@
 
 load_script_file /home/msofo/tcad_sisero/sisero_ll/cmds_svisual/svisual_pmos_gate_bias.tcl
 cd /home/msofo/tcad_sisero/sisero_ll/cmds_svisual
-#!-> wrong # args: should be "set varName ?newValue?". (line 1)
-# Exit status: 222
+#-> 0
  
