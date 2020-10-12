@@ -29,10 +29,11 @@ Physics {
 }
 
 Plot {
+	DopingWells
 	eDensity hDensity eCurrent hCurrent
 	eQuasiFermi hQuasiFermi
 	Current
-	Potential SpaceCharge ElectricField
+	Potential SpaceCharge ElectricField ElectricField/Vector
 	eMobility hMobility eVelocity hVelocity
 	Doping DonorConcentration AcceptorConcentration
 }
@@ -66,10 +67,10 @@ Solve {
 		* Goal {Name="chargeflow"  Voltage=0.0}
 		Goal {Name="drain" Voltage=0.0}
 		Goal {Name="source" Voltage=1.5}
-	){Coupled{ Poisson Electron Hole}
-	CurrentPlot}
-		Plot(-Loadable FilePrefix="../plts/PreDrain")
+	){Coupled{ Poisson Electron Hole} CurrentPlot}
+	Plot(-Loadable FilePrefix="../plts/PreDrain")
 	Save (FilePrefix="../savs/PreDrain")
+
 *	Quasistationary(
 *		InitialStep=1e-5 MinStep=1e-7 MaxStep=1.0
 *		Goal {DopingWell(0.25 12.2) eQuasiFermi=100.0}

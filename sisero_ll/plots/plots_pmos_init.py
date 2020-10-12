@@ -1,10 +1,13 @@
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib import cm
+from scipy.interpolate import griddata
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.backends.backend_pdf
 import pandas as pd
 
 figs=[]
-folder='out_svisual/'
+folder='../out_svisual/'
 
 # Implants
 fig=plt.figure()
@@ -30,6 +33,37 @@ plt.show()
 figs.append(fig)
 plt.close(fig)
 
+# Surface plot of the ElectrostaticPotential
+y, x, field = np.genfromtxt(folder+'test.csv', delimiter=',',skip_header=2,unpack=True)
+fig=plt.figure()
+ax = fig.gca(projection='3d')
+y, x, field = np.genfromtxt(folder+'test.csv', delimiter=',',skip_header=2,unpack=True)
+ax.plot_trisurf(x,y,field,cmap=cm.jet)
+#plt.xlabel(r'x ($\mu$m)')
+#plt.ylabel('Potential (V)')
+plt.title('ElectrostaticPotential')
+plt.grid()
+plt.show()
+figs.append(fig)
+
+# Surface plot of the ElectrostaticPotential
+y, x, z = np.genfromtxt(folder+'test.csv', delimiter=',',skip_header=2,unpack=True)
+#xi=np.linspace(np.amin(x),np.amax(x),x.size)
+#yi=np.linspace(np.amin(y),np.amax(y),y.size)
+xi=np.arange(np.amin(x),np.amax(x),0.1)
+yi=np.arange(np.amin(y),np.amax(y),0.1)
+zi = griddata((x, y), z, (xi[None,:], yi[:,None]), method='cubic')
+fig=plt.figure()
+cs=plt.contourf(xi,yi,zi,cmap=plt.cm.jet)
+cbar=plt.colorbar(cs)
+#plt.xlabel(r'x ($\mu$m)')
+#plt.ylabel(r'y ($\mu$m)')
+plt.title('ElectrostaticPotential')
+plt.grid()
+plt.show()
+figs.append(fig)
+
+
 #fig=plt.figure()
 #plt.plot(xa,ND-NA,label='ND-NA')
 #plt.xlabel(r'y ($\mu$m)')
@@ -42,7 +76,7 @@ plt.close(fig)
 ##plt.close(fig)
 
 fig=plt.figure()
-efield , x = np.genfromtxt(folder+'ElectricField.csv', delimiter=',',skip_header=2,unpack=True)
+efield , x = np.genfromtxt(folder+'init_ElectricField.csv', delimiter=',',skip_header=2,unpack=True)
 plt.plot(x,efield, label='Electric field')
 plt.xlabel(r'x ($\mu$m)')
 plt.ylabel('Electric field (V/cm)')
@@ -53,7 +87,7 @@ figs.append(fig)
 #plt.close(fig)
 
 fig=plt.figure()
-potential , x = np.genfromtxt(folder+'ElectrostaticPotential.csv', delimiter=',',skip_header=2,unpack=True)
+potential , x = np.genfromtxt(folder+'init_ElectrostaticPotential.csv', delimiter=',',skip_header=2,unpack=True)
 plt.plot(x,potential, label='Sentaurus')
 plt.xlabel(r'x ($\mu$m)')
 plt.ylabel('Potential (V)')
@@ -66,7 +100,7 @@ figs.append(fig)
 
 # Space charge
 fig=plt.figure()
-charge , x = np.genfromtxt(folder+'SpaceCharge.csv', delimiter=',',skip_header=2,unpack=True)
+charge , x = np.genfromtxt(folder+'init_SpaceCharge.csv', delimiter=',',skip_header=2,unpack=True)
 plt.plot(x,charge, label='SpaceCharge')
 plt.xlabel(r'x ($\mu$m)')
 plt.ylabel('SpaceCharge')
@@ -94,9 +128,9 @@ figs.append(fig)
 # ---------------------------------------------------------
 # Electrons and holes density
 fig=plt.figure()
-eDensity , x = np.genfromtxt(folder+'eDensity.csv', delimiter=',',skip_header=2,unpack=True)
+eDensity , x = np.genfromtxt(folder+'init_eDensity.csv', delimiter=',',skip_header=2,unpack=True)
 plt.plot(x,eDensity, label='eDensity')
-hDensity , x = np.genfromtxt(folder+'hDensity.csv', delimiter=',',skip_header=2,unpack=True)
+hDensity , x = np.genfromtxt(folder+'init_hDensity.csv', delimiter=',',skip_header=2,unpack=True)
 plt.plot(x,hDensity, label='hDensity')
 plt.xlabel(r'x ($\mu$m)')
 plt.ylabel(r'Concentration (cm$^3$)')
