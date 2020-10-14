@@ -1,0 +1,21 @@
+###########################################
+# Sentaurus Visual O-2018.06.
+# Tcl log file.
+#------------------------------------------
+# Date: oct. 09, 2020. 11:54:12.
+# Version: 28.0.1030 (1.1030)
+# Mode: Interactive (GUI).
+# Mesa: enabled.
+# Hostname: microib.cab.cnea.gov.ar.
+# Machine: Linux, x86_64, x86_64.
+# Kernel: 3.10.0-1127.8.2.el7.x86_64.
+###########################################
+
+load_file /home/msofo/tcad_sisero/sisero_ll/structure/SiSeRO_msh.tdr
+create_plot -dataset SiSeRO_msh
+select_plots {Plot_SiSeRO_msh}
+#-> Plot_SiSeRO_msh
+#-> Plot_SiSeRO_msh
+#-> SiSeRO_msh
+exit 0
+ 

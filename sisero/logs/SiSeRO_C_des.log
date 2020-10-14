@@ -1,0 +1,1198 @@
+****************************************************************************
+***                           Sentaurus Device                           ***
+***                          Version O-2018.06                           ***
+***                       (1.1029, x86_64, Linux)                        ***
+***                                                                      ***
+***                       Copyright (C) 1994-2018                        ***
+***                            Synopsys, Inc.                            ***
+***                                                                      ***
+***  This software and the associated documentation are confidential     ***
+***  and proprietary to Synopsys, Inc.  Your use or disclosure of this   ***
+***  software is subject to the terms and conditions of a written        ***
+***  license agreement between you, or your company, and Synopsys, Inc.  ***
+****************************************************************************
+
+	Running on machine with the following configuration:
+	Host Name: microib.cab.cnea.gov.ar
+	Operating System: Linux rel. 3.10.0-1127.8.2.el7.x86_64 ver. #1 SMP Tue May 12 16:57:42 UTC 2020
+	Machine Type: x86_64
+	Process ID: 16397
+	Number of processors: 8
+	Domain Name: (none)
+	Date: Fri Oct  9 18:03:28 2020  (-03)
+
+Fri Oct  9 18:03:28 2020: checked out 1 sdevice license(s)
+Parsing circuit file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029/bs_psource.ccf
+Parsing circuit file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029/sd_hb_vsource.ccf
+Parsing circuit file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029/sd_SRL1.ccf
+Parsing circuit file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029/sd_hb_isource.ccf
+Parsing circuit file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029/sd_hb_pGC.ccf
+Parsing circuit file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029/sd_hb_vsource2.ccf
+Parsing circuit file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029/sd_hb_sRL.ccf
+Parsing circuit file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029/sd_hb_isource2.ccf
+Parsing circuit file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/scm/ferroelectric.ccf
+Parsing circuit file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/scm/MOS_harness.ccf
+Loading shared object file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/scm/MOS_harness.so.linux64
+Loading shared object file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/scm/ferroelectric.so.linux64
+Loading shared object file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029/sd_hb_isource2.so.linux64
+Loading shared object file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029/sd_hb_sRL.so.linux64
+Loading shared object file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029/sd_hb_vsource2.so.linux64
+Loading shared object file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029/sd_hb_pGC.so.linux64
+Loading shared object file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029/sd_hb_isource.so.linux64
+Loading shared object file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029/sd_SRL1.so.linux64
+Loading shared object file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029/sd_hb_vsource.so.linux64
+Loading shared object file /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029/bs_psource.so.linux64
+Fri Oct  9 18:03:28 2020: checked out 2 sdevice-parallel license(s)
+Fri Oct  9 18:03:28 2020: checked out 2 sparallel license(s)
+
+Input source: SDEVICE_C_des.cmd
+
+===============================
+
+Output file: ../logs/SiSeRO_C_des.log
+
+
+GlobalParameter {
+}
+no ACExtract file
+
+PMIPath file: /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029 /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice
+
+CMIPath file: /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/sdevice-28.0.1029 /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/linux64/lib/scm
+
+SPICEPath file: /opt/synopsys/TCADSentaurus/O_2018.06/tcad/current/lib/sdevice-28.0.1029/spice
+
+no DevicePath file
+
+no CIRCUITSAVENAME file
+
+no CIRCUITLOADNAME file
+
+Numerical parameters:
+  Absolute error : 
+    Poisson : 1.0000e-03
+    eqPoisson : 1.0000e-03
+    Electron : 1.0000e-05
+    Hole : 1.0000e-05
+    Photon-Rate-Equation : 1.0000e-07
+    Photon-Phase-Equation : 1.0000e-05
+    Rate-Stabilize-Equation : 1.0000e-07
+    QW-Scattering-Equations : 1.0000e-05
+    QW-eScattering-Equation : 1.0000e-05
+    QW-hScattering-Equation : 1.0000e-05
+    Optical Problem : 1.0000e-03
+    Wavelength : 1.0000e-03
+    Bandstructure : 1.0000e-03
+    EmissionTable : 1.0000e-03
+    DephasingRates : 1.0000e-03
+    Photon Recycling : 1.0000e-03
+    Electron-Temperature : 1.0000e-04
+    Hole-Temperature : 1.0000e-04
+    Lattice-Hole-Electron-Temperature : 1.0000e-03
+    Circuit : 1.0000e-03
+    TCircuit : 1.0000e-03
+    Contact : 1.0000e-03
+    TContact : 1.0000e-03
+    Continuation : 1.0000e-03
+    eLaplace : 1.0000e-03
+    hLaplace : 1.0000e-03
+    tLaplace : 1.0000e-03
+    MonteCarlo : 1.0000e-03
+    MCPoissonPDE : 1.0000e-03
+    eQuantumPotential : 1.0000e-03
+    hQuantumPotential : 1.0000e-03
+    quasi-fermi-potential : 1.0000e-03
+    ConductiveInsulator : 1.0000e-03
+    ContactAndConductiveInsulator : 1.0000e-03
+    SingletExciton : 1.0000e-05
+    FEPolarization : 1.0000e-05
+    eHopping : 1.0000e-03
+    hHopping : 1.0000e-03
+    HydrogenAtom : 1.0000e-03
+    HydrogenMolecule : 1.0000e-03
+    HydrogenIon : 1.0000e-03
+    HydrogenSiliconBondOccupation : 1.0000e-03
+    TrapPDE : 1.0000e-03
+    eSHEDistribution : 1.0000e-03
+    hSHEDistribution : 1.0000e-03
+    Landau-Lifshitz-Gilbert[theta] : 1.0000e-03
+    Landau-Lifshitz-Gilbert[phi] : 1.0000e-03
+    Landau-Lifshitz-Gilbert[x] : 1.0000e-03
+    Landau-Lifshitz-Gilbert[y] : 1.0000e-03
+    Landau-Lifshitz-Gilbert[z] : 1.0000e-03
+    Mechanics : 1.0000e-03
+    ExternalTransportSolver : 1.0000e-03
+    ReactionDiffusionPDE : 1.0000e-03
+  RelErrControl (Reference error): 
+    Poisson : 0.025852
+    eqPoisson : 1
+    Electron : 1.0000e+10
+    Hole : 1.0000e+10
+    Photon-Rate-Equation : 1.0000e-07
+    Photon-Phase-Equation : 1
+    Rate-Stabilize-Equation : 1.0000e-07
+    QW-Scattering-Equations : 1.0000e+10
+    QW-eScattering-Equation : 1.0000e+10
+    QW-hScattering-Equation : 1.0000e+10
+    Optical Problem : 1
+    Wavelength : 1
+    Bandstructure : 1
+    EmissionTable : 1
+    DephasingRates : 1
+    Photon Recycling : 1
+    Electron-Temperature : 3.0000e+02
+    Hole-Temperature : 3.0000e+02
+    Lattice-Hole-Electron-Temperature : 3.0000e+02
+    Circuit : 1
+    TCircuit : 1
+    Contact : 0.025852
+    TContact : 1
+    Continuation : 1
+    eLaplace : 1
+    hLaplace : 1
+    tLaplace : 1
+    MonteCarlo : 1
+    MCPoissonPDE : 1
+    eQuantumPotential : 0.025852
+    hQuantumPotential : 0.025852
+    quasi-fermi-potential : 0.025852
+    ConductiveInsulator : 1
+    ContactAndConductiveInsulator : 1
+    SingletExciton : 1.0000e+10
+    FEPolarization : 0.025852
+    eHopping : 0.025852
+    hHopping : 0.025852
+    HydrogenAtom : 1.0000e+10
+    HydrogenMolecule : 1.0000e+10
+    HydrogenIon : 1.0000e+10
+    HydrogenSiliconBondOccupation : 1
+    TrapPDE : 1.0000e-05
+    eSHEDistribution : 0.025852
+    hSHEDistribution : 0.025852
+    Landau-Lifshitz-Gilbert[theta] : 1
+    Landau-Lifshitz-Gilbert[phi] : 1
+    Landau-Lifshitz-Gilbert[x] : 1
+    Landau-Lifshitz-Gilbert[y] : 1
+    Landau-Lifshitz-Gilbert[z] : 1
+    Mechanics : 1
+    ExternalTransportSolver : 1
+    ReactionDiffusionPDE : 1
+  Relative error : 5 digits
+  Without checked transient error
+  Max. #iterations : 100
+  LineSearchDamping=1
+  #undamped iterations : 100
+  No incomplete Newton
+  transient method : Backward Euler
+  Linear solver : ILS
+  Linear solver for AC analysis : blocked decomposition
+  Linear solver for SHEDistribution Model : Super
+  do not use extrapolation in transient/quasistationary computations
+  use complex supernodal in ac-analysis (if possible)
+  do not use smoothed PDE's in transient/quasistationary computations
+  use automatic coupling of contact/circuit stuff
+  Spice temperature: 3.0015e+02
+  Spice nominal temperature of parameter measurements: 3.0015e+02
+  Spice minimum conductance gmin: 1.0000e-12
+  Use 64 bit (double) normal precision floating point arithmetic.
+  Mininum |rhs| : 1.0000e-05
+  Maximum |rhs| : 1.0000e+15
+  Maximum |rhs| factor : 1.0000e+10
+  Maximum |rhs| factor1 : 1.0000e+10
+  Lattice Temperature Range : (50,5.0000e+03)
+  Carrier Temperature Range : (10,8.0000e+04)
+  Simplified first order SHE of BTE will be solved
+  SHERefinementCutoff : 20
+  No user dependencies.
+  Number of assembly threads: 8 (Sentaurus Device command file)
+  Number of solver threads: 8 (Sentaurus Device command file)
+  Thread stacksize: 1000000 bytes (default)
+  Go serial if not enough parallel licenses are available.
+
+Default device parameters:
+  Electrodes:
+    "source" : 1.5 V (Ohmic), area factor : 1
+    "drain" : 0.0000e+00 V (Ohmic), area factor : 1
+    "gate" : 3 V (Ohmic), area factor : 1
+  RayTrace Boundaries:
+  Files:
+    no Boundary file
+    Grid file: ../structure/SiSeRO_msh.tdr
+    no Doping file
+    no MobilityDoping file
+    no Load file
+    no Save file
+    Plot file: ../plts/SiSeRO_C_des.dat
+    no DevFieldsName file
+    AutoNewtonPlot file: ../plts/SiSeRO_C_%d_des.tdr
+    no Path file
+    no Lifetime file
+    no Temperature file
+    Current file: ../currents/SiSeRO_C_des.plt
+    no PMIUserFields file
+    no Extraction file
+    no ModelParameters file
+    ParameterPath directories: 
+    no Piezo file
+    no mcDOS file
+    no ModeGain file
+    no Optical emission table for stimulated emission file
+    no Optical emission table for spontaneous emission file
+    no Optical emission table for photon phase change coefficient file
+    no EmissionTable file
+    no DephasingRates file
+    no ASESpectrum file
+    no OpticalFarField file
+    no OpticalIntensityPattern file
+    no SaveOpticalIntensityPattern file
+    no OpticalXYAnglePattern file
+    no SaveOpticalXYAnglePattern file
+    no IlluminationSpectrum file
+    no SpectralPlot file
+    no OpticalSolverInput file
+    no OpticalGenerationInput file
+    no OpticalGenerationOutuput file
+    no OptGenTransientScaling file
+    no MonteCarloInput file
+    no MonteCarloOutput file
+    no ACPlot file
+-----------------------------------------------
+  Numerical parameters:
+    With avalanche derivatives
+    Using old wavelength search algorithm
+    Do not reinitialize quasi Fermi potentials in quasi-stationary simulations
+    Ignore ionization integral constraints
+    Without diagonal preconditioning
+    With Scharfetter-Gummel Discretization
+    Relative error : 5 digits
+    Delta for numerical tunnelling derivatives : 1.0000e-03
+    Do not compute breakdown paths and ionization integrals
+    QuasiFermiPotential is used for Contact Equation
+    With usage of best vertex in element (maximum element-vertex volume angle) for impact ionization models
+-----------------------------------------------
+-----------------------------------------------
+  Physical models:
+    Without incomplete ionization
+    Use Si parameters
+    TATNonlocalPathNC = 0.0000e+00
+    With SRH-Recombination
+      Without field dependent lifetimes
+      With doping dependent lifetimes
+      With temperature dependent lifetimes (power law)
+    Without CDL-Recombination
+    With optical generation computation 
+    Without Band-to-Band-Tunneling
+    With Auger-Recombination (without Generation)
+    Without Radiative Recombination
+    Without Surface-Recombination
+    Without Trap-Assisted-Auger-Recombination
+    PMI recombination models: none
+    Without thermal resistance interfaces
+    Without distributed resistance interfaces for electrons
+    Without distributed resistance interfaces for holes
+    Without Piezo
+    Without Anisotropic Material Properties
+
+    With Avalanche-Generation: 
+    For electrons:
+      driving force is Electric Field,
+      model according to van Overstraeten / de Man
+    For holes:
+      driving force is Electric Field,
+      model according to van Overstraeten / de Man
+
+    Without Alpha Particle
+    Without Heavy Ion
+    Without polarization
+    Volume charge density: 0.0000e+00 cm^-3
+    Device Temperature = 3.0000e+02 K
+    Electron Quasi Fermi Potential: 0.0000e+00 V
+    Hole Quasi Fermi Potential: 0.0000e+00 V
+    Without MagneticField
+    With SingletExciton Barrier Type
+    Fermi Statistic 
+    Intrinsic density models:
+      default bandgap model
+      Bandgap narrowing model: OldSlotboom with bandgap narrowing (Fermi)
+    default affinity model
+    default effective mass model
+    Electron mobility:
+      Doping dependence:
+        Default
+      no Carrier-Carrier scattering
+      E_normal dependence:
+        Lombardi
+      Without ThinLayer mobility model
+      High-field mobility: Caughey-Thomas saturation model, using gradient quasi-Fermi potential.
+      Einstein relation for diffusivity-mobility ratio.
+    Hole mobility:
+      Doping dependence:
+        Default
+      no Carrier-Carrier scattering
+      E_normal dependence:
+        Lombardi
+      Without ThinLayer mobility model
+      High-field mobility: Caughey-Thomas saturation model, using gradient quasi-Fermi potential.
+      Einstein relation for diffusivity-mobility ratio.
+    With quantum potential for electrons
+      Use Synopsys' potential-based formula
+      Do not resolve abrupt jumps in band edge
+    With quantum potential for holes
+      Use Synopsys' potential-based formula
+      Do not resolve abrupt jumps in band edge
+    Energy relaxation time model: according to formula in parameter file
+    Schottky resistance model: default bult-in model
+    Lattice thermal conductivity model: according to formula in parameter file
+    Metal Resistivity model: according to formula in parameter file
+    Thermo Electric Power model: extraploted Si data
+    Metal Thermo Electric Power model: MetalThermoElectricPower model not defined
+    Lattice heat capacity model: temperature dependent
+    no piezoelectric polarization model
+    Without default parameters from file (use built-in default parameters)
+-----------------------------------------------
+  Process information for extraction purposes:
+    none
+  Plot variables:
+    eDensity
+    hDensity
+    eCurrentDensity
+    hCurrentDensity
+    TotalCurrentDensity
+    ElectrostaticPotential
+    SpaceCharge
+    ElectricField
+    eMobility
+    hMobility
+    eVelocity
+    hVelocity
+    DopingConcentration
+    DonorConcentration
+    AcceptorConcentration
+
+------------------------------------------------
+  NoisePlot variables:
+    none
+  Plot groups:
+    none
+
+------------------------------------------------
+  CurrentPlot variables:
+    none
+Devices:
+Systems:
+Solve :
+Load( FilePrefix = "../savs/Vgs_1.50" )
+  { }
+Quasistationary ( Digits : 5, Max. #iterations : 100, 
+      Initial step in t : 1.0000e-03, 
+      Minimum step in t : 5.0000e-06, Maximum step in t : 1, 
+      Increment : 2, Decrement : 2, 
+      Goal values :
+        Contact drain : -2.0000e+00V
+    )
+  {
+    Coupled ( Digits : 5, Max. #iterations : 100, 
+        Solver : ILS,
+        #undamped iterations : 100 
+        )
+        { Poisson Electron Hole } 
+    CurrentPlot (
+         Time (fixed times:
+             0.0000e+00 5.0000e-03 0.01 0.015 0.02
+             0.025 0.03 0.035 0.04 0.045
+             0.05 0.055 0.06 0.065 0.07
+             0.075 0.08 0.085 0.09 0.095
+             0.1 0.105 0.11 0.115 0.12
+             0.125 0.13 0.135 0.14 0.145
+             0.15 0.155 0.16 0.165 0.17
+             0.175 0.18 0.185 0.19 0.195
+             0.2 0.205 0.21 0.215 0.22
+             0.225 0.23 0.235 0.24 0.245
+             0.25 0.255 0.26 0.265 0.27
+             0.275 0.28 0.285 0.29 0.295
+             0.3 0.305 0.31 0.315 0.32
+             0.325 0.33 0.335 0.34 0.345
+             0.35 0.355 0.36 0.365 0.37
+             0.375 0.38 0.385 0.39 0.395
+             0.4 0.405 0.41 0.415 0.42
+             0.425 0.43 0.435 0.44 0.445
+             0.45 0.455 0.46 0.465 0.47
+             0.475 0.48 0.485 0.49 0.495
+             0.5 0.505 0.51 0.515 0.52
+             0.525 0.53 0.535 0.54 0.545
+             0.55 0.555 0.56 0.565 0.57
+             0.575 0.58 0.585 0.59 0.595
+             0.6 0.605 0.61 0.615 0.62
+             0.625 0.63 0.635 0.64 0.645
+             0.65 0.655 0.66 0.665 0.67
+             0.675 0.68 0.685 0.69 0.695
+             0.7 0.705 0.71 0.715 0.72
+             0.725 0.73 0.735 0.74 0.745
+             0.75 0.755 0.76 0.765 0.77
+             0.775 0.78 0.785 0.79 0.795
+             0.8 0.805 0.81 0.815 0.82
+             0.825 0.83 0.835 0.84 0.845
+             0.85 0.855 0.86 0.865 0.87
+             0.875 0.88 0.885 0.89 0.895
+             0.9 0.905 0.91 0.915 0.92
+             0.925 0.93 0.935 0.94 0.945
+             0.95 0.955 0.96 0.965 0.97
+             0.975 0.98 0.985 0.99 0.995
+             1) )
+      { }
+  }
+
+===============================
+
+Reading grid '../structure/SiSeRO_msh.tdr' ... 
+  coordinate system: UCS, 3d_sprocess (x is device down direction)
+  use coordinate system as is (no transformation)
+  TDR format
+  Number of grid points is 91318.
+done.
+
+Adding interfaces and contacts .... done.
+
+Computing edges ...
+  Number of edges: 273561
+done.
+Computing boxes ...
+
+  CVPL_AverageBoxMethod = TRUE 
+   
+  Boxmethod Parallel Computing: nbThreads = 8 
+
+  Computing Delaunay coefficients ...   done.
+  Delaunay coefficients time: (wallclock = 0.02 s, tcpu = 0.02 s)
+
+  Parallel Computing Voronoi faces, coefficients, and measures ... 
+  CVPL_Algorithm = TRUE 
+
+    Computing Obtuse Elements ... 
+     Obtuse Elements time:  tcpu = 0.0000e+00 s
+      New Parameters time: (wallclock = 0.01 s, tcpu = 0.05 s)
+
+Info for all regions (NumberOfRegions = 12):
+        ElementWithMinVolume(178731) Vertex0(65590)(-5.502592e-01, 2.339987e+01) Volume = 1.690891e-08 um3 (3.42e-11 from TotalVolume)
+          ElementWithMinEdge(129049) Vertex0(65590)(-5.502592e-01, 2.339987e+01) Length = 1.304448e-04 um
+              MaxFlatElement(129052) Vertex0(91316)(-5.000000e-01, 7.700000e+00)  Angle = 8.495461e-01 degrees
+         ElementWithMinAngle(124884) Vertex0(63350)(-4.313660e-01, 8.000000e+00)  Angle = 6.413875e-02 degrees
+   ElementWithMaxQualityEdge(124884) Vertex0(63350)(-4.313660e-01, 8.000000e+00)    R/L = 4.466550e+02 
+ ElementWithMaxQualityHeight(129052) Vertex0(91316)(-5.000000e-01, 7.700000e+00)    R/H = 9.097245e+03 
+
+Info for semiconductor regions (NumberOfRegions = 3):
+        ElementWithMinVolume( 56820) Vertex0(28740)( 1.604667e-01, 1.270000e+01) Volume = 3.646289e-07 um3 (7.37e-10 from TotalVolume)
+          ElementWithMinEdge( 56775) Vertex0(28710)( 1.604667e-01, 1.205000e+01) Length = 4.667250e-04 um
+              MaxFlatElement( 58662) Vertex0(29697)( 2.486627e-02, 1.377500e+01)  Angle = 5.687946e+01 degrees
+         ElementWithMinAngle( 56783) Vertex0(28713)( 1.604667e-01, 1.240000e+01)  Angle = 1.337066e-01 degrees
+   ElementWithMaxQualityEdge( 56779) Vertex0(28713)( 1.600000e-01, 1.220000e+01)    R/L = 2.142595e+02 
+ ElementWithMaxQualityHeight( 56779) Vertex0(28713)( 1.600000e-01, 1.220000e+01)    R/H = 2.142601e+02 
+
+   NumberOfEdges              = 273561 
+   NumberOfGeometricalEdges   = 273366 
+   NumberOfDoubleEdges        =      0 
+   MaxNumberOfEdgesPerVertex  =     13; vertex(63357) = (-5.751546e-01,  8.000000e+00) [um]
+   MaxNumberOfElementsPerEdge =      2; edge(1) = (1, 4262) 
+                                        vertex(1) = ( 1.975000e+01,  0.000000e+00) [um]
+                                        vertex(4262) = ( 1.975000e+01,  2.000000e-01) [um]
+
+                        NumberOfVertices =  91513 
+                        NumberOfElements = 182049 
+                       NumberOfTriangles = 182049  (100.00 %)
+                      NumberOfRectangles =      0  ( 0.00 %)
+                  NumberOfObtuseElements =   2019  ( 1.11 %)
+             NumberOfNonDelaunayElements =      7  ( 0.00 %)
+
+ Non-Delaunay elements with maximum CoeffIntersection  = -3.371147e+01 (VolumeIntersection = 9.094230e+03)
+   Region(Gas_1), elem1 = 129052, vertex0( 91316)(-5.000000e-01, 7.700000e+00) 
+   Region(Gas_1), elem2 = 124915, vertex0( 63374)(-5.000000e-01, 7.600000e+00) 
+
+ Non-Delaunay elements with maximum VolumeIntersection = 9.094230e+03 (CoeffIntersection  = -3.371147e+01)
+   Region(Gas_1), elem1 = 129052, vertex0( 91316)(-5.000000e-01, 7.700000e+00) 
+   Region(Gas_1), elem2 = 124915, vertex0( 63374)(-5.000000e-01, 7.600000e+00) 
+
+
+  VertexWithMaxMeasure(91316)(-5.000000e-01, 7.700000e+00)
+  MaxVertMeasure(1.762338e-01)/VertVolume(3.423672e-03) = 5.15e+01
+
+
+/-------- Region non-Delaunay elements -----------------------------------------------------------------------
+ Region            Volume      BoxMethodVolume  DeltaVolume  Elements  non-Delaunay      non-DelaunayVolume 
+  name              [um2]          [um2]           [%]                   Elements              [um2]   [%]   
+ -------------------------------------------------------------------------------------------------------------
+ Silicon_1      4.6798400e+02  4.6798400e+02     2.5e-11    122019       0 ( 0.00 %)   0.0000000e+00 ( 0.0000) 
+ Gas_1          1.6502208e+01  1.6881512e+01       2.299      7035       3 ( 0.04 %)   7.7345962e-01 ( 4.6870) 
+ Oxide_1.1      1.2000136e-01  1.2000136e-01     2.5e-12      4136       0 ( 0.00 %)   0.0000000e+00 ( 0.0000) 
+ Nitride_1.1    7.9998510e-02  7.9998510e-02     8.9e-13      2981       0 ( 0.00 %)   0.0000000e+00 ( 0.0000) 
+ Aluminum_2     2.4250236e+00  2.4313818e+00       0.262      2300       2 ( 0.09 %)   2.1911345e-02 ( 0.9036) 
+ Oxide_1.3      1.3500153e-01  1.3500153e-01     1.3e-12      4171       0 ( 0.00 %)   0.0000000e+00 ( 0.0000) 
+ Nitride_1.3    8.9998324e-02  8.9998324e-02     1.1e-12      2992       0 ( 0.00 %)   0.0000000e+00 ( 0.0000) 
+ Nitride_1.2    1.5599709e-01  1.5599709e-01     1.2e-12      5590       0 ( 0.00 %)   0.0000000e+00 ( 0.0000) 
+ Oxide_1.2      2.3400265e-01  2.3400265e-01     7.6e-12      6946       0 ( 0.00 %)   0.0000000e+00 ( 0.0000) 
+ PolySilicon_1  3.0250044e+00  3.0250044e+00     1.3e-11     20044       0 ( 0.00 %)   0.0000000e+00 ( 0.0000) 
+ BCIM_region    1.6000000e-02  1.6000000e-02     7.3e-14       411       0 ( 0.00 %)   0.0000000e+00 ( 0.0000) 
+ Aluminum_1     4.1500000e+00  4.2167369e+00       1.608      3424       2 ( 0.06 %)   1.3889817e-01 ( 3.3469) 
+ .............................................................................................................
+ Total          4.9491724e+02  4.9536963e+02       0.091    182049       7 ( 0.00 %)   9.3426914e-01 ( 0.1888) 
+\-------------------------------------------------------------------------------------------------------------
+
+
+/-------- Interface non-Delaunay elements --------------------------------------------------------------------
+ Region1           Elements  non-Delaunay     Volume            non-Delaunay            Obtuse
+ Region2                      Elements         [um2]          DeltaVolume [um2]        Elements
+ -------------------------------------------------------------------------------------------------------------
+ Silicon_1          247       0 ( 0.00 %)   3.1584300e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Oxide_1.1          247       0 ( 0.00 %)   4.4933954e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Silicon_1           41       0 ( 0.00 %)   3.0005085e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Aluminum_2          41       0 ( 0.00 %)   4.2687256e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Silicon_1          252       0 ( 0.00 %)   3.5532338e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Oxide_1.3          252       0 ( 0.00 %)   5.0550698e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Silicon_1          409       0 ( 0.00 %)   6.1589385e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Oxide_1.2          409       0 ( 0.00 %)   8.7621210e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Silicon_1           59       0 ( 0.00 %)   5.3068000e-04   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ BCIM_region         59       0 ( 0.00 %)   1.6649658e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Silicon_1           38       0 ( 0.00 %)   2.6057047e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Aluminum_1          38       0 ( 0.00 %)   3.7070512e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Gas_1               87       0 ( 0.00 %)   5.7831461e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Nitride_1.1         87       0 ( 0.00 %)   8.4461207e-04   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Gas_1               75       0 ( 0.00 %)   2.0863532e-01   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Aluminum_2          76       0 ( 0.00 %)   2.2527292e-01   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Gas_1               38       0 ( 0.00 %)   2.4504856e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Nitride_1.2         38       0 ( 0.00 %)   3.7894926e-04   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Gas_1              281       0 ( 0.00 %)   2.1129778e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ PolySilicon_1      281       0 ( 0.00 %)   6.2457850e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Gas_1               70       0 ( 0.00 %)   1.9664379e-01   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Aluminum_1          69       0 ( 0.00 %)   3.9952505e-01   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Oxide_1.1          238       0 ( 0.00 %)   1.5865400e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Nitride_1.1        238       0 ( 0.00 %)   2.9068553e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Oxide_1.1            9       0 ( 0.00 %)   2.3437766e-05   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Aluminum_2           9       0 ( 0.00 %)   2.5192998e-05   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Nitride_1.1        117       0 ( 0.00 %)   3.3276877e-04   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Aluminum_2         117       0 ( 0.00 %)   2.0894166e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Aluminum_2           7       0 ( 0.00 %)   6.6147495e-05   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Nitride_1.2          7       0 ( 0.00 %)   8.1944588e-05   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Aluminum_2          10       0 ( 0.00 %)   2.5192998e-05   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Oxide_1.2           10       0 ( 0.00 %)   2.3437766e-05   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Oxide_1.3          241       0 ( 0.00 %)   1.7848576e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Nitride_1.3        241       0 ( 0.00 %)   3.2702123e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Oxide_1.3           10       0 ( 0.00 %)   2.3437766e-05   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Aluminum_1          10       0 ( 0.00 %)   2.5192998e-05   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Nitride_1.3        203       0 ( 0.00 %)   1.3703359e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Aluminum_1         204       0 ( 0.00 %)   8.9019377e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Nitride_1.2        374       0 ( 0.00 %)   5.6683679e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Oxide_1.2          374       0 ( 0.00 %)   3.0937531e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Nitride_1.2        299       0 ( 0.00 %)   1.7321705e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ PolySilicon_1      299       0 ( 0.00 %)   5.0640900e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Nitride_1.2         20       0 ( 0.00 %)   1.7529872e-04   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Aluminum_1          20       0 ( 0.00 %)   1.0112029e-03   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Oxide_1.2            9       0 ( 0.00 %)   2.3437766e-05   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ Aluminum_1           9       0 ( 0.00 %)   2.5192998e-05   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+ .............................................................................................................
+ Total             6269       0 ( 0.00 %)   1.1341823e+00   0.0000000e+00 ( 0.00 %)   0 ( 0.00 %) 
+\-------------------------------------------------------------------------------------------------------------
+    done.
+  done.
+  (times: wallclock = 0.29 s, tcpu = 0.41 s)
+done.
+Reading doping '../structure/SiSeRO_msh.tdr' (TDR format) ...
+done.
+done.
+
+
+=======
+Region: "Aluminum_1"
+  (material is "Aluminum")
+=======
+  Using lattice crystal coordinate system from TDR file:
+    slice.angle                   : -9.0000e+01 [deg]
+    wafer.orient, vertical.orient : (0, 0, 1)
+    flat.orient, horizontal.orient: [1, 1, 0]
+    miscut.tilt                   : 0.0000e+00 [deg]
+    miscut.toward                 : [1, 1, 0]
+    lattice.system                : cubic
+    polytype                      : 4H
+    lattice.const                 : 4.0500e-08 [cm]
+    lattice.const.b               : 4.0500e-08 [cm]
+    lattice.const.c               : 4.0500e-08 [cm]
+    unit cell angles: alpha = 90, beta = 90, gamma = 90 [deg]
+    effective LatticeParameters:
+      X = (0.0000e+00, 0.0000e+00, -1.0000e+00)
+      Y = (-7.0711e-01, 0.707107, 0.0000e+00)
+      Z = (0.707107, 0.707107, 0.0000e+00)
+  Constants are not modified and equal to default ones
+
+=======
+Region: "Aluminum_2"
+  (material is "Aluminum")
+=======
+  Using lattice crystal coordinate system from TDR file:
+    slice.angle                   : -9.0000e+01 [deg]
+    wafer.orient, vertical.orient : (0, 0, 1)
+    flat.orient, horizontal.orient: [1, 1, 0]
+    miscut.tilt                   : 0.0000e+00 [deg]
+    miscut.toward                 : [1, 1, 0]
+    lattice.system                : cubic
+    polytype                      : 4H
+    lattice.const                 : 4.0500e-08 [cm]
+    lattice.const.b               : 4.0500e-08 [cm]
+    lattice.const.c               : 4.0500e-08 [cm]
+    unit cell angles: alpha = 90, beta = 90, gamma = 90 [deg]
+    effective LatticeParameters:
+      X = (0.0000e+00, 0.0000e+00, -1.0000e+00)
+      Y = (-7.0711e-01, 0.707107, 0.0000e+00)
+      Z = (0.707107, 0.707107, 0.0000e+00)
+  Constants are not modified and equal to default ones
+
+=======
+Region: "BCIM_region"
+  (material is "Silicon")
+=======
+  Using lattice crystal coordinate system from TDR file:
+    slice.angle                   : -9.0000e+01 [deg]
+    wafer.orient, vertical.orient : (0, 0, 1)
+    flat.orient, horizontal.orient: [1, 1, 0]
+    miscut.tilt                   : 0.0000e+00 [deg]
+    miscut.toward                 : [1, 1, 0]
+    lattice.system                : cubic
+    polytype                      : Zincblende
+    lattice.const                 : 5.4310e-08 [cm]
+    lattice.const.b               : 5.4310e-08 [cm]
+    lattice.const.c               : 5.4310e-08 [cm]
+    unit cell angles: alpha = 90, beta = 90, gamma = 90 [deg]
+    effective LatticeParameters:
+      X = (0.0000e+00, 0.0000e+00, -1.0000e+00)
+      Y = (-7.0711e-01, 0.707107, 0.0000e+00)
+      Z = (0.707107, 0.707107, 0.0000e+00)
+  Constants are not modified and equal to default ones
+
+=======
+Region: "Gas_1"
+  (material is "Gas")
+=======
+  Using default lattice crystal coordinate system:
+    effective LatticeParameters:
+      X = (1, 0.0000e+00, 0.0000e+00)
+      Y = (0.0000e+00, 1, 0.0000e+00)
+      Z = (0.0000e+00, 0.0000e+00, 1)
+  Constants are not modified and equal to default ones
+
+=======
+Region: "Nitride_1.1"
+  (material is "Nitride")
+=======
+  Using default lattice crystal coordinate system:
+    effective LatticeParameters:
+      X = (1, 0.0000e+00, 0.0000e+00)
+      Y = (0.0000e+00, 1, 0.0000e+00)
+      Z = (0.0000e+00, 0.0000e+00, 1)
+  Constants are not modified and equal to default ones
+
+=======
+Region: "Nitride_1.2"
+  (material is "Nitride")
+=======
+  Using default lattice crystal coordinate system:
+    effective LatticeParameters:
+      X = (1, 0.0000e+00, 0.0000e+00)
+      Y = (0.0000e+00, 1, 0.0000e+00)
+      Z = (0.0000e+00, 0.0000e+00, 1)
+  Constants are not modified and equal to default ones
+
+=======
+Region: "Nitride_1.3"
+  (material is "Nitride")
+=======
+  Using default lattice crystal coordinate system:
+    effective LatticeParameters:
+      X = (1, 0.0000e+00, 0.0000e+00)
+      Y = (0.0000e+00, 1, 0.0000e+00)
+      Z = (0.0000e+00, 0.0000e+00, 1)
+  Constants are not modified and equal to default ones
+
+=======
+Region: "Oxide_1.1"
+  (material is "Oxide")
+=======
+  Using default lattice crystal coordinate system:
+    effective LatticeParameters:
+      X = (1, 0.0000e+00, 0.0000e+00)
+      Y = (0.0000e+00, 1, 0.0000e+00)
+      Z = (0.0000e+00, 0.0000e+00, 1)
+  Constants are not modified and equal to default ones
+
+=======
+Region: "Oxide_1.2"
+  (material is "Oxide")
+=======
+  Using default lattice crystal coordinate system:
+    effective LatticeParameters:
+      X = (1, 0.0000e+00, 0.0000e+00)
+      Y = (0.0000e+00, 1, 0.0000e+00)
+      Z = (0.0000e+00, 0.0000e+00, 1)
+  Constants are not modified and equal to default ones
+
+=======
+Region: "Oxide_1.3"
+  (material is "Oxide")
+=======
+  Using default lattice crystal coordinate system:
+    effective LatticeParameters:
+      X = (1, 0.0000e+00, 0.0000e+00)
+      Y = (0.0000e+00, 1, 0.0000e+00)
+      Z = (0.0000e+00, 0.0000e+00, 1)
+  Constants are not modified and equal to default ones
+
+=======
+Region: "PolySilicon_1"
+  (material is "PolySi")
+=======
+  Using lattice crystal coordinate system from TDR file:
+    slice.angle                   : -9.0000e+01 [deg]
+    wafer.orient, vertical.orient : (0, 0, 1)
+    flat.orient, horizontal.orient: [1, 1, 0]
+    miscut.tilt                   : 0.0000e+00 [deg]
+    miscut.toward                 : [1, 1, 0]
+    lattice.system                : cubic
+    polytype                      : Zincblende
+    lattice.const                 : 5.4300e-08 [cm]
+    lattice.const.b               : 5.4300e-08 [cm]
+    lattice.const.c               : 5.4300e-08 [cm]
+    unit cell angles: alpha = 90, beta = 90, gamma = 90 [deg]
+    effective LatticeParameters:
+      X = (0.0000e+00, 0.0000e+00, -1.0000e+00)
+      Y = (-7.0711e-01, 0.707107, 0.0000e+00)
+      Z = (0.707107, 0.707107, 0.0000e+00)
+  Constants are not modified and equal to default ones
+
+=======
+Region: "Silicon_1"
+  (material is "Silicon")
+=======
+  Using lattice crystal coordinate system from TDR file:
+    slice.angle                   : -9.0000e+01 [deg]
+    wafer.orient, vertical.orient : (0, 0, 1)
+    flat.orient, horizontal.orient: [1, 1, 0]
+    miscut.tilt                   : 0.0000e+00 [deg]
+    miscut.toward                 : [1, 1, 0]
+    lattice.system                : cubic
+    polytype                      : Zincblende
+    lattice.const                 : 5.4310e-08 [cm]
+    lattice.const.b               : 5.4310e-08 [cm]
+    lattice.const.c               : 5.4310e-08 [cm]
+    unit cell angles: alpha = 90, beta = 90, gamma = 90 [deg]
+    effective LatticeParameters:
+      X = (0.0000e+00, 0.0000e+00, -1.0000e+00)
+      Y = (-7.0711e-01, 0.707107, 0.0000e+00)
+      Z = (0.707107, 0.707107, 0.0000e+00)
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Gas_1/Aluminum_1"
+  (material interface is "Gas/Aluminum")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Nitride_1.2/Aluminum_1"
+  (material interface is "Nitride/Aluminum")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Nitride_1.3/Aluminum_1"
+  (material interface is "Nitride/Aluminum")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Oxide_1.2/Aluminum_1"
+  (material interface is "Oxide/Aluminum")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Oxide_1.3/Aluminum_1"
+  (material interface is "Oxide/Aluminum")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Silicon_1/Aluminum_1"
+  (material interface is "Silicon/Aluminum")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Gas_1/Aluminum_2"
+  (material interface is "Gas/Aluminum")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Nitride_1.1/Aluminum_2"
+  (material interface is "Nitride/Aluminum")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Aluminum_2/Nitride_1.2"
+  (material interface is "Aluminum/Nitride")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Oxide_1.1/Aluminum_2"
+  (material interface is "Oxide/Aluminum")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Aluminum_2/Oxide_1.2"
+  (material interface is "Aluminum/Oxide")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Silicon_1/Aluminum_2"
+  (material interface is "Silicon/Aluminum")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Silicon_1/BCIM_region"
+  (material interface is "Silicon/Silicon")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Gas_1/Nitride_1.1"
+  (material interface is "Gas/Nitride")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Gas_1/Nitride_1.2"
+  (material interface is "Gas/Nitride")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Gas_1/PolySilicon_1"
+  (material interface is "Gas/PolySi")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Oxide_1.1/Nitride_1.1"
+  (material interface is "Oxide/Nitride")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Nitride_1.2/Oxide_1.2"
+  (material interface is "Nitride/Oxide")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Nitride_1.2/PolySilicon_1"
+  (material interface is "Nitride/PolySi")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Oxide_1.3/Nitride_1.3"
+  (material interface is "Oxide/Nitride")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Silicon_1/Oxide_1.1"
+  (material interface is "Silicon/Oxide")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Silicon_1/Oxide_1.2"
+  (material interface is "Silicon/Oxide")
+================
+  Constants are not modified and equal to default ones
+
+================
+RegionInterface: "Silicon_1/Oxide_1.3"
+  (material interface is "Silicon/Oxide")
+================
+  Constants are not modified and equal to default ones
+
+==========
+Electrode: "chargeflow"
+==========
+  Constants are not modified and equal to default ones
+
+==========
+Electrode: "drain"
+==========
+  Constants are not modified and equal to default ones
+
+==========
+Electrode: "gate"
+==========
+  Constants are not modified and equal to default ones
+
+==========
+Electrode: "source"
+==========
+  Constants are not modified and equal to default ones
+
+
+Acceptor and donor concentrations (AcceptorConcentration, DonorConcentration):
+    computed based on the following species from the doping file:
+        ArsenicConcentration (donor)
+        PhosphorusActiveConcentration (donor)
+        BoronActiveConcentration (acceptor)
+Net doping concentration (DopingConcentration):
+    obtained from doping file
+Total doping concentration (TotalConcentration):
+    recomputed from acceptor and donor concentrations
+
+
+
+With Constant Reference Potential:
+  Parameters of Reference Semiconductor:
+    The Electron Affinity: 4.07274
+    The Band Gap: 1.10821
+    The Electron DOS: 2.8583e+19
+    The Hole DOS: 3.1046e+19
+  The Constant Reference Potential: 4.62578
+
+===============================
+Starting solve of next problem:
+Load( FilePrefix = "../savs/Vgs_1.50" )
+  { }
+===============================
+
+Loading device '':
+Reading save '../savs/Vgs_1.50_des.tdr' (TDR format) ...
+  coordinate system: UCS, 3d_sprocess (x is device down direction)
+  use coordinate system as is (no transformation)
+done.
+
+===============================
+Starting solve of next problem:
+Quasistationary ( Digits : 5, Max. #iterations : 100, 
+      Initial step in t : 1.0000e-03, 
+      Minimum step in t : 5.0000e-06, Maximum step in t : 1, 
+      Increment : 2, Decrement : 2, 
+      Goal values :
+        Contact drain : -2.0000e+00V
+    )
+  {
+    Coupled ( Digits : 5, Max. #iterations : 100, 
+        Solver : ILS,
+        #undamped iterations : 100 
+        )
+        { Poisson Electron Hole } 
+    CurrentPlot (
+         Time (fixed times:
+             0.0000e+00 5.0000e-03 0.01 0.015 0.02
+             0.025 0.03 0.035 0.04 0.045
+             0.05 0.055 0.06 0.065 0.07
+             0.075 0.08 0.085 0.09 0.095
+             0.1 0.105 0.11 0.115 0.12
+             0.125 0.13 0.135 0.14 0.145
+             0.15 0.155 0.16 0.165 0.17
+             0.175 0.18 0.185 0.19 0.195
+             0.2 0.205 0.21 0.215 0.22
+             0.225 0.23 0.235 0.24 0.245
+             0.25 0.255 0.26 0.265 0.27
+             0.275 0.28 0.285 0.29 0.295
+             0.3 0.305 0.31 0.315 0.32
+             0.325 0.33 0.335 0.34 0.345
+             0.35 0.355 0.36 0.365 0.37
+             0.375 0.38 0.385 0.39 0.395
+             0.4 0.405 0.41 0.415 0.42
+             0.425 0.43 0.435 0.44 0.445
+             0.45 0.455 0.46 0.465 0.47
+             0.475 0.48 0.485 0.49 0.495
+             0.5 0.505 0.51 0.515 0.52
+             0.525 0.53 0.535 0.54 0.545
+             0.55 0.555 0.56 0.565 0.57
+             0.575 0.58 0.585 0.59 0.595
+             0.6 0.605 0.61 0.615 0.62
+             0.625 0.63 0.635 0.64 0.645
+             0.65 0.655 0.66 0.665 0.67
+             0.675 0.68 0.685 0.69 0.695
+             0.7 0.705 0.71 0.715 0.72
+             0.725 0.73 0.735 0.74 0.745
+             0.75 0.755 0.76 0.765 0.77
+             0.775 0.78 0.785 0.79 0.795
+             0.8 0.805 0.81 0.815 0.82
+             0.825 0.83 0.835 0.84 0.845
+             0.85 0.855 0.86 0.865 0.87
+             0.875 0.88 0.885 0.89 0.895
+             0.9 0.905 0.91 0.915 0.92
+             0.925 0.93 0.935 0.94 0.945
+             0.95 0.955 0.96 0.965 0.97
+             0.975 0.98 0.985 0.99 0.995
+             1) )
+      { }
+  }
+===============================
+
+Computing solution for t=0 :
+Computing Coupled( 1 poisson-equation(s) , 1 current-contact-equation(s) , 
+                   1 electron-equation(s) , 1 hole-equation(s) ) 
+using Bank/Rose nonlinear solver.
+
+Iteration   |Rhs|      factor     |step|     error   #inner  #iterative  time
+------------------------------------------------------------------------------
+    0      2.01e+01                                                      2.59
+    1      3.93e+00   1.00e+00   1.43e-02   5.75e+00    0       200     40.18
+    2      4.43e+00   1.00e+00   1.52e-02   4.87e+00    0       200     73.86
+    3      1.03e+01   1.00e+00   1.07e-02   5.78e+00    0       200    108.70
+    4      1.67e+01   1.00e+00   1.33e-02   4.86e+00    0       200    142.16
+    5      1.67e+01   1.00e+00   1.29e-02   5.71e+00    0       200    177.69
+    6      1.16e+01   1.00e+00   9.87e-03   4.88e+00    0       200    211.60
+    7      4.94e+00   1.00e+00   1.01e-02   5.72e+00    0       200    246.98
+    8      4.00e+00   1.00e+00   1.05e-02   4.86e+00    0       200    280.93
+    9      7.34e+00   1.00e+00   1.53e-02   5.90e+00    0       200    316.47
+   10      2.22e+01   1.00e+00   3.40e-02   5.36e+00    0       200    351.34
+   11      4.12e+00   1.00e+00   6.35e-02   5.73e+00    0       200    385.93
+   12      3.06e+01   1.00e+00   4.08e-02   5.76e+00    0       200    420.09
+   13      4.14e+00   1.00e+00   5.94e-02   5.73e+00    0       200    455.16
+   14      3.69e+00   1.00e+00   5.93e-02   4.86e+00    0       200    489.38
+   15      1.31e+01   1.00e+00   2.61e-02   5.97e+00    0       200    525.08
+   16      8.10e+00   1.00e+00   4.44e-02   4.93e+00    0       200    559.81
+   17      1.26e+01   1.00e+00   4.79e-02   5.72e+00    0       200    595.05
+   18      3.76e+01   1.00e+00   2.54e-02   5.11e+00    0       200    629.39
+   19      4.24e+00   1.00e+00   3.25e-02   5.77e+00    0       200    664.44
+   20      4.97e+00   1.00e+00   3.68e-02   4.86e+00    0       200    698.43
+   21      3.32e+00   1.00e+00   2.67e-02   5.72e+00    0       200    733.75
+   22      2.95e+00   1.00e+00   2.57e-02   4.86e+00    0       200    767.68
+   23      4.52e+00   1.00e+00   2.62e-02   5.82e+00    0       200    802.78
+   24      3.23e+00   1.00e+00   2.70e-02   4.86e+00    0       200    837.36
+   25      3.57e+00   1.00e+00   2.01e-02   5.72e+00    0       200    873.30
+   26      2.78e+01   1.00e+00   1.12e-02   4.86e+00    0       200    907.47
+   27      1.17e+02   1.00e+00   9.98e-03   6.11e+00    0       200    942.46
+   28      1.51e+01   1.00e+00   5.26e-02   4.87e+00    0       200    976.82
+   29      4.56e+01   1.00e+00   5.22e-02   5.93e+00    0       200   1012.23
+   30      3.17e+02   1.00e+00   3.13e-02   4.87e+00    0       200   1046.79
+   31      2.05e+02   1.00e+00   3.18e-02   5.73e+00    0       200   1081.91
+   32      1.85e+02   1.00e+00   1.03e-02   4.86e+00    0       200   1115.68
+   33      4.45e+01   1.00e+00   1.16e-02   5.72e+00    0       200   1150.87
+   34      1.96e+02   1.00e+00   1.38e-02   4.88e+00    0       200   1185.15
+   35      6.06e+01   1.00e+00   2.59e-02   5.92e+00    0       200   1220.28
+   36      7.61e+01   1.00e+00   4.07e-02   4.86e+00    0       200   1254.77
+   37      7.81e+01   1.00e+00   3.84e-02   5.76e+00    0       200   1289.65
+   38      2.03e+01   1.00e+00   2.63e-02   4.90e+00    0       200   1324.50
+   39      1.20e+01   1.00e+00   2.58e-02   5.79e+00    0       200   1359.47
+   40      5.60e+00   1.00e+00   2.62e-02   4.88e+00    0       200   1394.05
+   41      3.56e+01   1.00e+00   2.52e-02   5.90e+00    0       200   1429.66
+   42      5.64e+01   1.00e+00   3.55e-02   4.96e+00    0       200   1464.02
+   43      3.49e+00   1.00e+00   3.95e-02   5.72e+00    0       200   1499.01
+   44      9.52e+00   1.00e+00   2.47e-02   4.86e+00    0       200   1533.43
+   45      9.69e+00   1.00e+00   2.56e-02   5.71e+00    0       200   1568.55
+   46      5.42e+01   1.00e+00   2.16e-02   4.89e+00    0       200   1603.47
+   47      3.35e+02   1.00e+00   1.51e-02   5.71e+00    0       200   1638.72
+   48      7.83e+01   1.00e+00   1.43e-02   4.86e+00    0       200   1672.92
+   49      8.57e+02   1.00e+00   1.58e-02   5.72e+00    0       200   1708.30
+   50      9.83e+01   1.00e+00   1.46e-02   4.86e+00    0       200   1742.54
+   51      4.39e+01   1.00e+00   1.02e-02   5.72e+00    0       200   1777.38
+   52      8.07e+00   1.00e+00   1.03e-02   4.87e+00    0       200   1811.50
+   53      1.57e+01   1.00e+00   1.01e-02   5.72e+00    0       200   1846.69
+   54      2.72e+01   1.00e+00   9.96e-03   4.88e+00    0       200   1880.24
+   55      2.83e+01   1.00e+00   1.18e-02   5.72e+00    0       200   1914.69
+   56      1.32e+02   1.00e+00   1.30e-02   5.25e+00    0       200   1948.93
+   57      1.25e+01   1.00e+00   3.23e-02   5.73e+00    0       200   1984.37
+   58      5.43e+01   1.00e+00   3.07e-02   4.90e+00    0       200   2017.72
+   59      1.91e+01   1.00e+00   1.27e-02   5.75e+00    0       200   2052.59
+   60      2.98e+01   1.00e+00   1.62e-02   4.86e+00    0       200   2086.82
+   61      1.78e+02   1.00e+00   2.53e-02   5.74e+00    0       200   2121.97
+   62      2.16e+02   1.00e+00   2.81e-02   4.92e+00    0       200   2156.36
+   63      1.44e+02   1.00e+00   2.69e-02   5.82e+00    0       200   2191.45
+   64      5.55e+01   1.00e+00   3.18e-02   4.96e+00    0       200   2225.69
+   65      3.89e+01   1.00e+00   3.34e-02   5.82e+00    0       200   2260.82
+   66      6.70e+00   1.00e+00   3.50e-02   4.86e+00    0       200   2294.79
+   67      2.75e+00   1.00e+00   2.86e-02   6.54e+00    0       200   2330.25
+   68      6.72e+00   1.00e+00   8.77e-02   4.95e+00    0       200   2364.02
+   69      1.44e+01   1.00e+00   9.18e-02   5.76e+00    0       200   2399.55
+   70      2.97e+01   1.00e+00   2.29e-02   4.90e+00    0       200   2433.33
+   71      6.15e+00   1.00e+00   1.84e-02   5.72e+00    0       200   2468.82
+   72      5.04e+01   1.00e+00   1.82e-02   4.87e+00    0       200   2503.21
+   73      1.69e+01   1.00e+00   1.55e-02   5.74e+00    0       200   2538.64
+   74      1.56e+01   1.00e+00   1.27e-02   4.87e+00    0       200   2571.99
+   75      5.29e+01   1.00e+00   1.20e-02   1.09e+01    0       200   2606.89
+   76      2.51e+01   1.00e+00   2.11e-01   7.65e+00    0       200   2640.76
+   77      3.29e+01   1.00e+00   2.03e-01   8.24e+00    0       200   2676.55
+   78      3.74e+01   1.00e+00   1.18e-02   5.04e+00    0       200   2710.38
+   79      1.44e+01   1.00e+00   2.41e-02   5.79e+00    0       200   2745.49
+   80      5.42e+01   1.00e+00   2.65e-02   7.45e+00    0       200   2779.34
+   81      4.22e+00   1.00e+00   7.19e-02   5.72e+00    0       200   2814.23
+   82      4.57e+00   1.00e+00   5.97e-02   4.87e+00    0       200   2848.16
+   83      1.49e+01   1.00e+00   1.87e-02   5.86e+00    0       200   2882.98
+   84      2.54e+01   1.00e+00   2.81e-02   4.95e+00    0       200   2916.47
+   85      8.00e+00   1.00e+00   3.27e-02   5.73e+00    0       200   2951.64
+   86      2.19e+01   1.00e+00   1.99e-02   5.35e+00    0       200   2985.49
+   87      3.63e+00   1.00e+00   3.83e-02   5.71e+00    0       200   3020.97
+   88      6.29e+00   1.00e+00   3.50e-02   4.88e+00    0       200   3055.03
+   89      4.93e+00   1.00e+00   2.42e-02   5.73e+00    0       200   3090.58
+   90      1.66e+01   1.00e+00   2.87e-02   4.90e+00    0       200   3124.00
+   91      2.22e+00   1.00e+00   2.47e-02   5.71e+00    0       200   3159.26
+   92      9.08e+00   1.00e+00   2.35e-02   4.94e+00    0       200   3193.55
+   93      4.06e+00   1.00e+00   2.50e-02   5.71e+00    0       200   3228.47
+   94      4.35e+00   1.00e+00   2.48e-02   4.86e+00    0       200   3262.90
+   95      5.77e+01   1.00e+00   2.57e-02   5.71e+00    0       200   3297.94
+   96      1.85e+01   1.00e+00   2.79e-02   4.87e+00    0       200   3331.78
+   97      9.16e+00   1.00e+00   2.60e-02   5.93e+00    0       200   3367.09
+   98      6.99e+01   1.00e+00   4.05e-02   4.88e+00    0       200   3401.54
+   99      5.95e+00   1.00e+00   4.16e-02   5.72e+00    0       200   3436.83
+  100      1.68e+01   1.00e+00   2.32e-02   5.02e+00    0       200   3470.91
+writing ../plts/SiSeRO_C_100_des.tdr (TDR format) ... done.
+Finished, because...
+#iterations larger than 100.
+
+Accumulated times:
+Rhs time:      380.39 s
+Jacobian time:  98.92 s
+Solve time:    2984.13 s
+Total time:    3472.63 s
+
+
+Finished, because of...
+Solve for t=0 does not converge.
+
+Writing plot '../plts/SiSeRO_C_des.tdr' (TDR format) ... done.
+
+Fri Oct  9 18:21:47 2020: checked in 2 sparallel license(s)
+Fri Oct  9 18:21:47 2020: checked in 2 sdevice-parallel license(s)
+Fri Oct  9 18:21:47 2020: checked in 1 sdevice license(s)
+
+******************************************************************************
+Sentaurus Device process size: 1867 megabytes
+Sentaurus Device simulation times:
+  wallclock: 1099.38 s (0 h:18 m:19 s)
+  total cpu: 3632.21 s (1 h:00 m:32 s)
+Sentaurus Device simulation finished (Date: Fri Oct  9 18:21:47 2020  (-03)).
+********************************* Good Bye ! *********************************

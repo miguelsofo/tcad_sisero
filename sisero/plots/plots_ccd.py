@@ -1,0 +1,163 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib.backends.backend_pdf
+
+figs=[]
+folder='out_svisual/'
+
+# Implants
+fig=plt.figure()
+
+phos1 , x3 = np.genfromtxt(folder+'ccd_phosphorus.csv', delimiter=',',skip_header=2,unpack=True)
+plt.plot(x3,phos1,color='red',label='P @ Y=2.0 (channel)')
+
+#phos4 , x4 = np.genfromtxt(folder+'Phosphorus2.csv', delimiter=',',skip_header=2,unpack=True)
+#plt.plot(x4,phos4,'--',color='red',label='P @ Y=1.0 (stops)')
+
+plt.xlabel(r'y ($\mu$m)')
+plt.ylabel(r'($cm^{-3}$)')
+plt.title('Boron concentrations')
+plt.legend()
+plt.yscale('log')
+plt.xlim([-0.06,1.0])
+plt.show()
+figs.append(fig)
+#plt.close(fig)
+
+#fig=plt.figure()
+#plt.plot(xa,ND-NA,label='ND-NA')
+#plt.xlabel(r'y ($\mu$m)')
+#plt.ylabel(r'($cm^{-3}$)')
+#plt.title('Expected space charge in fully depletion (ND-NA)')
+#plt.legend()
+##plt.yscale('log')
+#plt.show()
+#figs.append(fig)
+##plt.close(fig)
+#
+#fig=plt.figure()
+#dopwell , x = np.genfromtxt(folder+'DopingWells.csv', delimiter=',',skip_header=2,unpack=True)
+#plt.plot(x,dopwell,color='blue',label='DopingWells')
+#plt.xlabel(r'y ($\mu$m)')
+#plt.ylabel(r'Doping well ID (#)')
+#plt.title('Doping Wells')
+#plt.legend()
+#plt.show()
+#figs.append(fig)
+#plt.close(fig)
+#
+#fig=plt.figure()
+#efield , x = np.genfromtxt(folder+'ElectricField.csv', delimiter=',',skip_header=2,unpack=True)
+#plt.plot(x,efield, label='Electric field')
+#plt.plot(y,E,label='1 D analytic calculation')
+#plt.xlabel(r'y ($\mu$m)')
+#plt.ylabel('Electric field (V/cm)')
+#plt.title('Electric field')
+#plt.legend()
+#plt.show()
+#figs.append(fig)
+##plt.close(fig)
+#
+## Plot potential
+#med30V=np.loadtxt('medici_holland_vsub30V.csv',delimiter=',')
+#med80V=np.loadtxt('medici_holland_vsub80V.csv',delimiter=',')
+#
+#fig=plt.figure()
+#potential , x = np.genfromtxt(folder+'ElectrostaticPotential.csv', delimiter=',',skip_header=2,unpack=True)
+#plt.plot(x,potential, label='Sentaurus')
+#plt.plot(y,V,label='1 D analytic calculation')
+#plt.plot(med30V[:,0]/0.0001,med30V[:,1],'--',color='black',label='Medici 30V')
+##plt.plot(med80V[:,0]/0.0001,med80V[:,1],'--',color='black',label='Medici 80V')
+#plt.xlabel(r'y ($\mu$m)')
+#plt.ylabel('Potential (V)')
+#plt.title('Potential')
+#plt.legend()
+#plt.grid()
+#plt.show()
+#figs.append(fig)
+##plt.close(fig)
+#
+#fig=plt.figure()
+#potential , x = np.genfromtxt(folder+'ElectrostaticPotential.csv', delimiter=',',skip_header=2,unpack=True)
+#plt.plot(x,potential,'.',label='Sentaurus')
+#plt.plot(y,V,label='1 D analytic calculation')
+#plt.plot(med30V[:,0]/0.0001,med30V[:,1],'--',color='black',label='Medici 30V')
+##plt.plot(med80V[:,0]/0.0001,med80V[:,1],'--',color='black',label='Medici 80V')
+#plt.xlabel(r'y ($\mu$m)')
+#plt.ylabel('Potential (V)')
+#plt.title('Potential - well detail')
+#plt.xlim((-0.3,3))
+#plt.legend()
+#plt.grid()
+#plt.show()
+#figs.append(fig)
+##plt.close(fig)
+#
+## Space charge
+#fig=plt.figure()
+#charge , x = np.genfromtxt(folder+'SpaceCharge.csv', delimiter=',',skip_header=2,unpack=True)
+#plt.plot(x,charge, label='SpaceCharge')
+#plt.xlabel(r'y ($\mu$m)')
+#plt.ylabel('SpaceCharge')
+#plt.title('SpaceCharge')
+#plt.legend()
+#plt.grid()
+#plt.show()
+#figs.append(fig)
+##plt.close(fig)
+#
+## ---------------------------------------------------------
+## Check if the device is in deep depletion. 
+## The resuting space charge should be equal to (ND-NA). This means that the concentration of holes and electrons is zero.
+## The Poisson equations integrates this SpaceCharge to obtain the ElectrostaticPotential. 
+#fig=plt.figure()
+#plt.plot(x,charge-(ND-NA), label='SpaceCharge')
+#plt.xlabel(r'y ($\mu$m)')
+#plt.ylabel('SpaceCharge-(ND-NA)')
+#plt.title('SpaceCharge-(ND-NA)')
+#plt.legend()
+#plt.grid()
+#plt.show()
+#figs.append(fig)
+#
+## ---------------------------------------------------------
+## Electrons and holes density
+#fig=plt.figure()
+#eDensity , x = np.genfromtxt(folder+'eDensity.csv', delimiter=',',skip_header=2,unpack=True)
+#plt.plot(x,eDensity, label='eDensity')
+#hDensity , x = np.genfromtxt(folder+'hDensity.csv', delimiter=',',skip_header=2,unpack=True)
+#plt.plot(x,hDensity, label='hDensity')
+#plt.xlabel(r'y ($\mu$m)')
+#plt.ylabel(r'Concentration (cm$^3$)')
+#plt.yscale('log')
+#plt.legend()
+#plt.grid()
+#plt.show()
+#figs.append(fig)
+##plt.close(fig)
+#
+#fig=plt.figure()
+#potential , x = np.genfromtxt(folder+'ElectrostaticPotential.csv', delimiter=',',skip_header=2,unpack=True)
+#plt.plot(x,potential, label='ElectrostaticPotential')
+#condBand , x = np.genfromtxt(folder+'ConductionBandEnergy.csv', delimiter=',',skip_header=2,unpack=True)
+#plt.plot(x,condBand,label='ConductionBandEnergy')
+#valeBand , x = np.genfromtxt(folder+'ValenceBandEnergy.csv', delimiter=',',skip_header=2,unpack=True)
+#plt.plot(x,valeBand,label='ValenceBandEnergy')
+##qfp , x = np.genfromtxt(folder+'QuasiFermiPotential.csv', delimiter=',',skip_header=2,unpack=True)
+##plt.plot(x,qfp,label='QuasiFermiPotential')
+#eqfp , x = np.genfromtxt(folder+'eQuasiFermiPotential.csv', delimiter=',',skip_header=2,unpack=True)
+#plt.plot(x,eqfp,'--',label='eQuasiFermiPotential')
+#hqfp , x = np.genfromtxt(folder+'hQuasiFermiPotential.csv', delimiter=',',skip_header=2,unpack=True)
+#plt.plot(x,hqfp,'--',label='hQuasiFermiPotential')
+#plt.xlabel(r'y ($\mu$m)')
+#plt.ylabel('Energy (eV)')
+#plt.legend()
+#plt.grid()
+#plt.show()
+#figs.append(fig)
+##plt.close(fig)
+#
+#pdf = matplotlib.backends.backend_pdf.PdfPages("ccd_phase200um.pdf")
+#for i in range(0,len(figs)): 
+#    pdf.savefig( figs[i] )
+#pdf.close()

@@ -1,0 +1,29 @@
+###########################################
+# Sentaurus Visual O-2018.06.
+# Tcl log file.
+#------------------------------------------
+# Date: oct. 05, 2020. 17:39:43.
+# Version: 28.0.1030 (1.1030)
+# Mode: Interactive (GUI).
+# Mesa: enabled.
+# Hostname: microib.cab.cnea.gov.ar.
+# Machine: Linux, x86_64, x86_64.
+# Kernel: 3.10.0-1127.8.2.el7.x86_64.
+###########################################
+
+load_file /home/msofo/tcad_sisero/sisero_ll/savs/Vgs_0.35_des.tdr
+create_plot -dataset Vgs_0.35_des
+select_plots {Plot_Vgs_0.35_des}
+#-> Plot_Vgs_0.35_des
+#-> Plot_Vgs_0.35_des
+#-> Vgs_0.35_des
+set_field_prop -plot Plot_Vgs_0.35_des -geom Vgs_0.35_des TotalCurrentDensity -show_bands
+#-> 0
+set_field_prop -plot Plot_Vgs_0.35_des -geom Vgs_0.35_des TotalCurrentDensity -hide_bands
+#-> 0
+set_field_prop -plot Plot_Vgs_0.35_des -geom Vgs_0.35_des TotalCurrentDensity -show_bands
+#-> 0
+zoom_plot -plot Plot_Vgs_0.35_des -window {-0.782774 10.0253 0.783919 16.3461}
+zoom_plot -plot Plot_Vgs_0.35_des -window {-2.34866 12.9539 -1.77978 14.4182}
+exit 0
+ 
