@@ -2,7 +2,7 @@
 # Sentaurus Visual O-2018.06.
 # Tcl log file.
 #------------------------------------------
-# Date: oct. 01, 2020. 10:14:01.
+# Date: oct. 18, 2020. 19:46:02.
 # Version: 28.0.1030 (1.1030)
 # Mode: Interactive (GUI).
 # Mesa: enabled.
@@ -11,13 +11,13 @@
 # Kernel: 3.10.0-1127.8.2.el7.x86_64.
 ###########################################
 
-load_file /home/msofo/tcad_sisero/sisero_ll/plts/init_SiSeRO_des.tdr
-create_plot -dataset init_SiSeRO_des
-select_plots {Plot_init_SiSeRO_des}
-#-> Plot_init_SiSeRO_des
-#-> Plot_init_SiSeRO_des
-#-> init_SiSeRO_des
-set_field_prop -plot Plot_init_SiSeRO_des -geom init_SiSeRO_des ElectrostaticPotential -show_bands
+load_file /home/msofo/tcad_sisero/sisero_ll/plts/PreDrain_qf1.0_des.tdr
+create_plot -dataset PreDrain_qf1.0_des
+select_plots {Plot_PreDrain_qf1.0_des}
+#-> Plot_PreDrain_qf1.0_des
+#-> Plot_PreDrain_qf1.0_des
+#-> PreDrain_qf1.0_des
+set_field_prop -plot Plot_PreDrain_qf1.0_des -geom PreDrain_qf1.0_des eDensity -show_bands
 #-> 0
 exit 0
  

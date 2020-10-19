@@ -1,5 +1,6 @@
 # Load TDR file.
-set mydata2D [load_file ../plts/PreDrain_des.tdr]
+#set mydata2D [load_file ../plts/PreDrain_des.tdr]
+set mydata2D [load_file ../sisero_biased/Vgs_1.50_des.tdr]
 
 set myplot2D [create_plot -dataset $mydata2D]
 list_fields -plot $myplot2D

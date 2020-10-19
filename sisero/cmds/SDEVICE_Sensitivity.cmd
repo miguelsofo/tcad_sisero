@@ -36,11 +36,13 @@ Physics {
 }
 
 Plot {
-	eDensity hDensity eCurrent hCurrent
-	Current
-	Potential SpaceCharge ElectricField
-	eMobility hMobility eVelocity hVelocity
-	Doping DonorConcentration AcceptorConcentration
+        DopingWells
+        eDensity hDensity eCurrent hCurrent
+        eQuasiFermi hQuasiFermi
+        Current
+        Potential SpaceCharge ElectricField ElectricField/Vector
+        eMobility hMobility eVelocity hVelocity
+        Doping DonorConcentration AcceptorConcentration
 }
 
 Math {
@@ -65,11 +67,10 @@ Solve {
 
 	Quasistationary(
                InitialStep=1e-5 MinStep=1e-7 MaxStep=1.0
-               Goal {WellContactName="chargeflow" eQuasiFermi=-10}
-       ){Coupled{ Poisson Hole Electron}
-       CurrentPlot}
-               Plot(-Loadable FilePrefix="../plts/Filled")
-       Save (FilePrefix="../savs/Filled")
+               Goal {WellContactName="chargeflow" eQuasiFermi=1.0}
+       ){Coupled ( Iterations=100 ) { Poisson Hole} CurrentPlot}
+       Plot(-Loadable FilePrefix="../plts/Filled")
+       Save(FilePrefix="../savs/Filled")
 
 * ------------------------------------------------------------
 * The following way does not have a good control on the 
@@ -77,7 +78,7 @@ Solve {
 *       Quasistationary(
 *               InitialStep=1e-5 MinStep=1e-7 MaxStep=1.0
 *               Goal {DopingWell(0.31 12.3) eQuasiFermi=-10}
-*       ){Coupled{ Poisson Hole}
+*       ){Coupled{Electron}
 *       CurrentPlot}
 *               Plot(-Loadable FilePrefix="../plts/Filled")
 *       Save (FilePrefix="../savs/Filled")

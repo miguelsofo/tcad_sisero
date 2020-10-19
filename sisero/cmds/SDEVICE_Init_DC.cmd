@@ -28,7 +28,10 @@ Physics {
 	Recombination( SRH( DopingDep TempDependence)  Auger)
 }
 
-Physics (Material="Silicon") {
+Physics (Region="Silicon_1") {
+	eQuasiFermi=100
+}
+Physics (Region="BCIM_region") {
 	eQuasiFermi=100
 }
 
