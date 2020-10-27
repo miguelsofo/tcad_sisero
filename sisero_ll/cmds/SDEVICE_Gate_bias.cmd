@@ -36,11 +36,13 @@ Physics {
 }
 
 Plot {
-	eDensity hDensity eCurrent hCurrent
-	Current
-	Potential SpaceCharge ElectricField
-	eMobility hMobility eVelocity hVelocity
-	Doping DonorConcentration AcceptorConcentration
+        DopingWells
+        eDensity hDensity eCurrent hCurrent
+        eQuasiFermi hQuasiFermi
+        Current
+        Potential SpaceCharge ElectricField ElectricField/Vector
+        eMobility hMobility eVelocity hVelocity
+        Doping DonorConcentration AcceptorConcentration
 }
 
 Math {
@@ -63,161 +65,223 @@ Solve {
 	* Load Previous
 	Load ( FilePrefix="../savs/PreDrain")
 	* Change Gate
+
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=1.5}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.00")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.00")
+	Save (FilePrefix="../savs/PreDrain")
+
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=1.55}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.05")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.05")
+	Save (FilePrefix="../savs/Vgs_0.05")
+
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=1.6}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.10")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.10")
+	Save (FilePrefix="../savs/Vgs_0.10")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=1.65}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.15")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.15")
+	Save (FilePrefix="../savs/Vgs_0.15")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=1.7}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.20")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.20")
+	Save (FilePrefix="../savs/Vgs_0.20")
+
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=1.75}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.25")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.25")
+	Save (FilePrefix="../savs/Vgs_0.25")
+
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=1.8}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.30")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.30")
+	Save (FilePrefix="../savs/Vgs_0.30")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=1.85}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.35")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.35")
+	Save (FilePrefix="../savs/Vgs_0.35")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=1.9}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.40")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.40")
+	Save (FilePrefix="../savs/Vgs_0.40")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=1.95}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.45")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.45")
+	Save ( FilePrefix="../savs/Vgs_0.45")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.0}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.50")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.50")
+	Save ( FilePrefix="../savs/Vgs_0.50")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.05}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.55")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.55")
+	Save ( FilePrefix="../savs/Vgs_0.55")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.1}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.60")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.60")
+	Save ( FilePrefix="../savs/Vgs_0.60")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.15}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.65")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.65")
+	Save ( FilePrefix="../savs/Vgs_0.65")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.2}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.70")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.70")
+	Save ( FilePrefix="../savs/Vgs_0.70")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.25}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.75")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.75")
+	Save ( FilePrefix="../savs/Vgs_0.75")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.3}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.80")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.80")
+	Save ( FilePrefix="../savs/Vgs_0.80")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.35}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.85")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.85")
+	Save ( FilePrefix="../savs/Vgs_0.85")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.4}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.90")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.90")
+	Save ( FilePrefix="../savs/Vgs_0.90")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.45}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_0.95")
+	Plot (-Loadable FilePrefix="../plts/Vgs_0.95")
+	Save ( FilePrefix="../savs/Vgs_0.95")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.5}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_1.00")
+	Plot (-Loadable FilePrefix="../plts/Vgs_1.00")
+	Save ( FilePrefix="../savs/Vgs_1.00")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.55}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_1.05")
+	Plot (-Loadable FilePrefix="../plts/Vgs_1.05")
+	Save ( FilePrefix="../savs/Vgs_1.05")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.6}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_1.10")
+	Plot (-Loadable FilePrefix="../plts/Vgs_1.10")
+	Save ( FilePrefix="../savs/Vgs_1.10")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.65}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_1.15")
+	Plot (-Loadable FilePrefix="../plts/Vgs_1.15")
+	Save ( FilePrefix="../savs/Vgs_1.15")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.7}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_1.20")
+	Plot (-Loadable FilePrefix="../plts/Vgs_1.20")
+	Save ( FilePrefix="../savs/Vgs_1.20")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.75}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_1.25")
+	Plot (-Loadable FilePrefix="../plts/Vgs_1.25")
+	Save ( FilePrefix="../savs/Vgs_1.25")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.8}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_1.30")
+	Plot (-Loadable FilePrefix="../plts/Vgs_1.30")
+	Save ( FilePrefix="../savs/Vgs_1.30")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.85}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_1.35")
+	Plot (-Loadable FilePrefix="../plts/Vgs_1.35")
+	Save ( FilePrefix="../savs/Vgs_1.35")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.9}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_1.40")
+	Plot (-Loadable FilePrefix="../plts/Vgs_1.40")
+	Save ( FilePrefix="../savs/Vgs_1.40")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=2.95}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_1.45")
+	Plot (-Loadable FilePrefix="../plts/Vgs_1.45")
+	Save ( FilePrefix="../savs/Vgs_1.45")
+	
 	Quasistationary(
 		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
 		Goal {Name="gate" Voltage=3.0}
 	){Coupled{ Poisson Electron Hole}}
-	Plot ( FilePrefix="../savs/Vgs_1.50")
+	Plot (-Loadable FilePrefix="../plts/Vgs_1.50")
+	Save ( FilePrefix="../savs/Vgs_1.50")
 }
 
 

@@ -49,7 +49,11 @@ di=(idrain[-1]-idrain[0])
 dq=q[-1]-q[0]
 
 print("Gain ",di/dq)
-print("Gain ",di/(21366-7607))
+print("Gain ",di/((21366-7607)*2.4))
+
+R=20000
+print("Signal voltage in a 1000ohm rsistor: ",di*R/((21366-7607)*2.4))
+print("DC voltage in a 1000ohm rsistor: ",idrain[0]*R)
 
 exit()
 

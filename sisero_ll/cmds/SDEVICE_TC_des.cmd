@@ -10,7 +10,7 @@ File {
 Electrode {
 	{Name="source"		Voltage=1.5} * charge=0. indicates floating
 	{Name="drain"		Voltage=0.0}
-	{Name="gate"		Voltage=1.5}
+	{Name="gate"		Voltage=2.1}
 	* {Name="chargeflow"	Voltage=0.0}
 }
 
@@ -43,7 +43,7 @@ Math {
 	* Numeric Controls
 	*Extrapolate	* switches on solution extrapolation along a bias ramp
 	Derivatives	* considers mobility derivatives in Jacobian
-	Iterations=100	* Maximum allowed number of Newton iterations (3D)
+	Iterations=200	* Maximum allowed number of Newton iterations (3D)
 	RelErrControl	* Enables the relative error control for solution variables
 	Digits=5	* relative error control value. Iterations stop if dx/x <10^-n
 	Method=ILS	* Use the iterative linear solver
@@ -53,11 +53,13 @@ Math {
 
 Solve {
 	* Load Previous
-	Load ( FilePrefix="../savs/PreDrain")
+	*Load ( FilePrefix="../savs/PreDrain")
+	Load ( FilePrefix="../savs/Vgs_0.60")
 	* Change Gate
+	* If the simulation does not converge make MinStep smaller.
 	Quasistationary(
-		InitialStep=1e-3 MinStep=5e-6 MaxStep=1.0
-		Goal {Name="gate" Voltage=2.1}
+		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
+		Goal {Name="gate" Voltage=2.2}
 	){Coupled{ Poisson Electron Hole}
 		CurrentPlot(-Loadable Time(Range=(0 1) Intervals=200))
 	}

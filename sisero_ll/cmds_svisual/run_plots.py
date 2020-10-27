@@ -25,5 +25,8 @@ def field2csv(inTDR):
 #field2csv('../plts/PreDrain_des.tdr')
 #field2csv('../plts/PreDrain_qf1.0_des.tdr')
 #field2csv('../plts/Vgs_0.65_des.tdr')
-field2csv('../plts/Vgs_0.65_qf1.3_des.tdr')
+#field2csv('../plts/Vgs_0.65_qf1.3_des.tdr')
+#field2csv('../plts/Vgs_1.00_des.tdr')
+#field2csv('../plts/Vgs_1.00_qf3.9_des.tdr')
+field2csv('../plts/Vgs_1.00_qf3.7_des.tdr')
 

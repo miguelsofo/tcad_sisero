@@ -1,9 +1,9 @@
-set infile ../plts/Vgs_0.65_qf1.3_des.tdr
-set eD_png ../out_svisual/Vgs_0.65_qf1.3_des.tdr_eDensity.png
-set eQF_png ../out_svisual/Vgs_0.65_qf1.3_des.tdr_eQF.png
-set hD_png ../out_svisual/Vgs_0.65_qf1.3_des.tdr_hDensity.png
-set EP_png ../out_svisual/Vgs_0.65_qf1.3_des.tdr_EP.png
-set out_csv "../out_svisual/Vgs_0.65_qf1.3_des.tdr.csv"
+set infile ../plts/Vgs_1.00_qf3.7_des.tdr
+set eD_png ../out_svisual/Vgs_1.00_qf3.7_des.tdr_eDensity.png
+set eQF_png ../out_svisual/Vgs_1.00_qf3.7_des.tdr_eQF.png
+set hD_png ../out_svisual/Vgs_1.00_qf3.7_des.tdr_hDensity.png
+set EP_png ../out_svisual/Vgs_1.00_qf3.7_des.tdr_EP.png
+set out_csv "../out_svisual/Vgs_1.00_qf3.7_des.tdr.csv"
 
 set ycut 12.3
 set mydata2D [load_file $infile]

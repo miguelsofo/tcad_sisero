@@ -26,7 +26,9 @@ figs=[]
 #data='../out_svisual/PreDrain_des.tdr.csv'
 #data='../out_svisual/PreDrain_qf1.0_des.tdr.csv'
 #data='../out_svisual/Vgs_0.65_des.tdr.csv'
-data='../out_svisual/Vgs_0.65_qf1.3_des.tdr.csv'
+#data='../out_svisual/Vgs_0.65_qf1.3_des.tdr.csv'
+#data='../out_svisual/Vgs_1.00_des.tdr.csv'
+data='../out_svisual/Vgs_1.00_qf3.7_des.tdr.csv'
 
 # ------------------------------------------------------
 # Read data set
