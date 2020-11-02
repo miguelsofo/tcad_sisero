@@ -1,7 +1,0 @@
-time,source OuterVoltage,source InnerVoltage,source QuasiFermiPotential,source DisplacementCurrent,source eCurrent,source hCurrent,source TotalCurrent,source Charge,drain OuterVoltage,drain InnerVoltage,drain QuasiFermiPotential,drain DisplacementCurrent,drain eCurrent,drain hCurrent,drain TotalCurrent,drain Charge,gate OuterVoltage,gate InnerVoltage,gate QuasiFermiPotential,gate DisplacementCurrent,gate eCurrent,gate hCurrent,gate TotalCurrent,gate Charge
-Time,OuterVoltage,InnerVoltage,QuasiFermiPotential,DisplacementCurrent,eCurrent,hCurrent,TotalCurrent,Charge,OuterVoltage,InnerVoltage,QuasiFermiPotential,DisplacementCurrent,eCurrent,hCurrent,TotalCurrent,Charge,OuterVoltage,InnerVoltage,QuasiFermiPotential,DisplacementCurrent,eCurrent,hCurrent,TotalCurrent,Charge
-0,0,0,0,0,2.304034e-15,0,2.304034e-15,-4.0777418e-14,0,0,0,0,5.7605899e-15,0,5.7605899e-15,-3.3813153e-15,0,0,0,0,2.7406895e-23,-2.7406895e-23,0,5.6242513e-16
-0,0,0,0,0,-1.937646e-15,0,-1.937646e-15,-4.0777418e-14,0,0,0,0,-2.3067776e-15,0,-2.3067776e-15,-3.3813153e-15,0,0,0,0,-6.4348798e-21,6.4348798e-21,0,5.6242513e-16
-0,0,0,0,0,-1.7808868e-15,0,-1.7808868e-15,-4.0777418e-14,0,0,0,0,-2.8913339e-15,0,-2.8913339e-15,-3.3813153e-15,0,0,0,0,-6.4361021e-21,6.4361021e-21,0,5.6242513e-16
-0,0,0,0,0,-1.7808868e-15,0,-1.7808868e-15,-4.0777418e-14,0,0,0,0,-2.8913339e-15,0,-2.8913339e-15,-3.3813153e-15,0,0,0,0,-6.4361021e-21,6.4361021e-21,0,5.6242513e-16
-

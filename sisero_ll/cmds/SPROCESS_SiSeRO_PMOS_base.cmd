@@ -148,6 +148,8 @@ photo	mask=TRGH	thickness=1.0
 implant	energy= 150<keV>	dose=4.0e11	tilt=7.00<degree>	rotation=0.00<degree>		Phosphorus		beam.dose
 strip	photoresist
 
+struct tdr=beforeDEP
+
 #############
 #implant DEP#
 #############
@@ -155,6 +157,7 @@ photo	mask=DEP	thickness=1.0
 implant	energy= 180<keV>	dose=2.4e12	tilt=7.00<degree>	rotation=0.00<degree>		Phosphorus		beam.dose
 strip	photoresist
 
+struct tdr=afterDEP
 
 ######
 #implant extra shallow BCIM reinforcement to bury the emerging p channel: now called BCIM2

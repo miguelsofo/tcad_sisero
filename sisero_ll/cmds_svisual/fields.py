@@ -28,7 +28,13 @@ figs=[]
 #data='../out_svisual/Vgs_0.65_des.tdr.csv'
 #data='../out_svisual/Vgs_0.65_qf1.3_des.tdr.csv'
 #data='../out_svisual/Vgs_1.00_des.tdr.csv'
-data='../out_svisual/Vgs_1.00_qf3.7_des.tdr.csv'
+#data='../out_svisual/Vgs_1.00_qf3.7_des.tdr.csv'
+
+data='../out_svisual/Vgs_0.65_des.tdr.csv'
+#data='../out_svisual/Vgs_0.80_des.tdr.csv'
+#data='../out_svisual/Vgs_1.00_des.tdr.csv'
+#data='../out_svisual/Vgs_1.20_des.tdr.csv'
+#data='../out_svisual/Vgs_1.40_des.tdr.csv'
 
 # ------------------------------------------------------
 # Read data set
@@ -51,46 +57,6 @@ pdf = matplotlib.backends.backend_pdf.PdfPages(data.rsplit('/',1)[1]+".pdf")
 for i in range(0,len(figs)): 
     pdf.savefig( figs[i] )
 pdf.close()
-
-exit()
-
-## ----------------------------------------
-## Time evolution of contact variables
-#iv=pd.read_csv(folder+'pmos_init_iv.csv',skiprows=[1])
-#for col in iv.columns: 
-#    print(col) 
-#
-#def gralplot(df,x,y):
-#	fig=plt.figure()
-#	plt.plot(df[x],df[y],'.-')
-#	plt.xlabel(x)
-#	plt.ylabel(y)
-#	plt.title(y)
-#	plt.show()
-#	figs.append(fig)
-#	plt.close(fig)
-#
-#gralplot(iv,'time','source OuterVoltage')
-#gralplot(iv,'time','source TotalCurrent')
-#gralplot(iv,'time','gate OuterVoltage')
-#gralplot(iv,'time','gate TotalCurrent')
-#gralplot(iv,'time','drain OuterVoltage')
-#gralplot(iv,'time','drain TotalCurrent')
-#figs.append(fig)
-#plt.close(fig)
-#
-## Input transistor curve ID-vs-VGS
-#fig=plt.figure()
-#idrain=iv['drain TotalCurrent']
-#vg=iv['gate OuterVoltage']
-#vs=iv['source OuterVoltage']
-#plt.plot(vg,idrain,'.-')
-#plt.ylabel('drain TotalCurrent')
-#plt.xlabel('gate OuterVoltage')
-#plt.legend()
-#plt.show()
-#figs.append(fig)
-#plt.close(fig)
 
 exit()
 
