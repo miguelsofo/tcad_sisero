@@ -5,7 +5,7 @@ import pandas as pd
 import scipy.constants as cnst
 
 figs=[]
-data='../out_svisual/sens_Vgs_0.65_qf1.3.csv'
+data='../out_svisual/sens_Vgs_0.65.csv'
 
 # ----------------------------------------
 # Time evolution of contact variables
@@ -25,23 +25,30 @@ def gralplot(df,x,y):
 	plt.close(fig)
 
 #gralplot(iv,'time','source OuterVoltage')
-#gralplot(iv,'time','source TotalCurrent')
+gralplot(iv,'time','source TotalCurrent')
 #gralplot(iv,'time','gate OuterVoltage')
 #gralplot(iv,'time','gate TotalCurrent')
 #gralplot(iv,'time','drain OuterVoltage')
-#gralplot(iv,'time','drain TotalCurrent')
+gralplot(iv,'time','drain TotalCurrent')
 #gralplot(iv,'time','chargeflow Charge')
 #gralplot(iv,'time','IntegrWell(0.25:12.4) eDensity')
 #gralplot(iv,'time','IntegrWell(0.25:12.4) X_eDensity')
 #gralplot(iv,'time','IntegrWell(0.25:12.4) Y_eDensity')
-gralplot(iv,'time','MaxWell(0.25:12.4) ElectrostaticPotential')
-gralplot(iv,'time','MaxWell(0.25:12.4) eQuasiFermiPotential')
-gralplot(iv,'time','AveWell(0.25:12.4) eQuasiFermiPotential')
+#gralplot(iv,'time','MaxWell(0.25:12.4) ElectrostaticPotential')
+#gralplot(iv,'time','MaxWell(0.25:12.4) eQuasiFermiPotential')
+#gralplot(iv,'time','AveWell(0.25:12.4) eQuasiFermiPotential')
+
+# Variable values at t=0
+t=iv['time'].to_numpy()
+for col in iv.columns: 
+    print(col) 
+    var=iv[col].to_numpy()
+    print(var[t==0])
 
 thk=2.4 #SiSero thickness in um
 # Input transistor curve ID-vs-VGS
 fig=plt.figure()
-idrain=(iv['source TotalCurrent'].to_numpy())*thk
+idrain=(iv['drain TotalCurrent'].to_numpy())*thk
 
 # See page 118 of sdevice_ug.pdf
 # The default is IntegrationUnit=um. In a 2D simulation, the unit of the integral is either μm2cm–3 (IntegrationUnit=um) or cm–1 (IntegrationUnit=cm).
@@ -55,16 +62,16 @@ dc=coeff[1]
 print("Idc = %lf uA" % (dc*1e6))
 print("Gain = %lf nA/e-" % (gain*1e9))
 
-plt.plot(q,idrain,'.-')
-plt.plot(q,p(q),'-')
+plt.plot(q,idrain*1e6,'.-')
+plt.plot(q,p(q)*1e6,'-')
 plt.grid()
-plt.ylabel('source TotalCurrent (A)')
+plt.ylabel('drain TotalCurrent (uA)')
 plt.xlabel('IntegrWell(0.25:12.4) eDensity (e-)')
 plt.show()
 
-R=20000
+R=50000
 print("DC voltage in a %d ohm resistor: %lf V" % (R,dc*R))
-print("Signal voltage in a %d ohm resistor: %lf V/e-" % (R,R*gain))
+print("Signal voltage in a %d ohm resistor: %lf uV/e-" % (R,R*gain*1e6))
 
 eqf=(iv['AveWell(0.25:12.4) eQuasiFermiPotential'].to_numpy())
 plt.figure()

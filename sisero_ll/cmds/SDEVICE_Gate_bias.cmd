@@ -45,6 +45,19 @@ Plot {
         Doping DonorConcentration AcceptorConcentration
 }
 
+CurrentPlot {
+        eDensity(
+                Integrate(DopingWell (0.25 12.4))
+        )
+        ElectrostaticPotential(
+                Maximum(DopingWell (0.25 12.4))
+        )
+        eQuasiFermi(
+                Maximum(DopingWell (0.25 12.4))
+                Average(DopingWell (0.25 12.4))
+        )
+}
+
 Math {
 	* Parallelization
 	Number_Of_Threads=8

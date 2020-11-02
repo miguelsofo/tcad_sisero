@@ -132,7 +132,6 @@ strip	photoresist
 #implant SUBIM#
 ###############
 photo	mask=SUBIM	thickness=1.0
-#implant	energy= 40<keV>		dose=4.5e15	tilt=7.00<degree>	rotation=0.00<degree>		Boron		beam.dose
 implant	energy= 40<keV>		dose=4.5e15	tilt=7.00<degree>	rotation=0.00<degree>		Phosphorus		beam.dose
 strip	photoresist
 
@@ -140,16 +139,14 @@ strip	photoresist
 #implant BCIM#
 ##############
 photo	mask=BCIM	thickness=1.0
-#implant	energy= 100<keV>	dose=1.3e12	tilt=7.00<degree>	rotation=0.00<degree>		Phosphorus	beam.dose
-implant	energy= 100<keV>	dose=1.3e12	tilt=7.00<degree>	rotation=0.00<degree>		Boron	beam.dose
+implant	energy= 150<keV>	dose=1.3e12	tilt=7.00<degree>	rotation=0.00<degree>		Boron	beam.dose
 strip	photoresist
 
 ##############
 #implant TRGH#
 ##############
 photo	mask=TRGH	thickness=1.0
-#implant	energy= 150<keV>	dose=4.0e11	tilt=7.00<degree>	rotation=0.00<degree>		Phosphorus		beam.dose
-implant	energy= 150<keV>	dose=4.0e11	tilt=7.00<degree>	rotation=0.00<degree>		Boron		beam.dose
+implant	energy= 150<keV>	dose=5.0e11	tilt=7.00<degree>	rotation=0.00<degree>		Boron		beam.dose
 strip	photoresist
 
 struct tdr=beforeDEP

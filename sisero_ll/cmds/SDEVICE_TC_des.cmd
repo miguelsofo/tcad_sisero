@@ -29,11 +29,26 @@ Physics {
 }
 
 Plot {
-	eDensity hDensity eCurrent hCurrent
-	Current
-	Potential SpaceCharge ElectricField
-	eMobility hMobility eVelocity hVelocity
-	Doping DonorConcentration AcceptorConcentration
+        DopingWells
+        eDensity hDensity eCurrent hCurrent
+        eQuasiFermi hQuasiFermi
+        Current
+        Potential SpaceCharge ElectricField ElectricField/Vector
+        eMobility hMobility eVelocity hVelocity
+        Doping DonorConcentration AcceptorConcentration
+}
+
+CurrentPlot {
+        eDensity(
+                Integrate(DopingWell (0.25 12.4))
+        )
+        ElectrostaticPotential(
+                Maximum(DopingWell (0.25 12.4))
+        )
+        eQuasiFermi(
+                Maximum(DopingWell (0.25 12.4))
+                Average(DopingWell (0.25 12.4))
+        )
 }
 
 Math {
@@ -53,12 +68,11 @@ Math {
 
 Solve {
 	* Load Previous
-	*Load ( FilePrefix="../savs/PreDrain")
 	Load ( FilePrefix="../savs/Vgs_0.60")
 	* Change Gate
 	* If the simulation does not converge make MinStep smaller.
 	Quasistationary(
-		InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
+		InitialStep=1e-8 MinStep=1e-12 MaxStep=1e-3
 		Goal {Name="gate" Voltage=2.2}
 	){Coupled{ Poisson Electron Hole}
 		CurrentPlot(-Loadable Time(Range=(0 1) Intervals=200))

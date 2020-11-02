@@ -38,6 +38,19 @@ Plot {
 	Doping DonorConcentration AcceptorConcentration
 }
 
+CurrentPlot {
+        eDensity(
+                Integrate(DopingWell (0.25 12.4))
+        )
+        ElectrostaticPotential(
+                Maximum(DopingWell (0.25 12.4))
+        )
+        eQuasiFermi(
+                Maximum(DopingWell (0.25 12.4))
+                Average(DopingWell (0.25 12.4))
+        )
+}
+
 Math {
 	* Parallelization
 	Number_Of_Threads=8
@@ -70,18 +83,6 @@ Solve {
 	){Coupled{ Poisson Electron Hole} CurrentPlot}
 	Plot(-Loadable FilePrefix="../plts/PreDrain")
 	Save (FilePrefix="../savs/PreDrain")
-
-*	Quasistationary(
-*		InitialStep=1e-5 MinStep=1e-7 MaxStep=1.0
-*		Goal {DopingWell(0.25 12.2) eQuasiFermi=100.0}
-*	){Coupled{ Poisson Hole}
-*	CurrentPlot}
-*		Plot(-Loadable FilePrefix="../plts/Drained")
-*	Save (FilePrefix="../savs/Drained")
-*	Coupled{ Poisson Electron Hole}
-*	CurrentPlot
-*		Plot(-Loadable FilePrefix="../plts/Initialized_DC")	
-*	Save ( FilePrefix="../savs/Initialized_DC")
 }
 
 
