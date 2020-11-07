@@ -63,10 +63,10 @@ Solve {
 	Coupled{ Poisson Electron Hole}
 	Quasistationary(
 		InitialStep=1e-5 MinStep=1e-8 MaxStep=1.0
-		Goal {Name="gate" Voltage=-3.0}
+		Goal {Name="gate" Voltage=-7.0}
 		* Goal {Name="chargeflow"  Voltage=0.0}
 		Goal {Name="drain" Voltage=0.0}
-		Goal {Name="source" Voltage=-3.0}
+		Goal {Name="source" Voltage=-7.0}
 	){Coupled{ Poisson Electron Hole} CurrentPlot}
 	Plot(-Loadable FilePrefix="../plts/PreDrain")
 	Save (FilePrefix="../savs/PreDrain")
