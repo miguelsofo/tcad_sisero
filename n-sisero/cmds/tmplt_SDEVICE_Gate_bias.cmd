@@ -10,14 +10,14 @@ File {
 	* Input Files
 	Grid	= "../structure/SiSeRO_msh.tdr"
 	* Output Files
-	Current	= "../currents/SiSeRO"
+Current = "../currents/Vgs_0.15"
 	Plot	= "../plts/SiSeRO"
-	Output	= "../logs/SiSeRO"
+Output  = "../logs/Vgs_0.15"
 }
 
 Electrode {
 	{Name="source"		Voltage=-7.0} * charge=0. indicates floating
-	{Name="gate"		Voltage=-7.0}	
+{Name="gate" Voltage=-6.8500000000000005}
 	{Name="drain"		Voltage=0.0}
 	* {Name="chargeflow"	Voltage=0.0}
 }
@@ -75,14 +75,14 @@ Math {
 
 Solve {
 * Load Previous
-Load ( FilePrefix="../savs/PreDrain")
+Load ( FilePrefix="../savs/Vgs_0.10")
 * Change Gate
 Quasistationary(
 InitialStep=1e-3 MinStep=1e-7 MaxStep=1.0
-Goal {Name="gate" Voltage=1.5}
+Goal {Name="gate" Voltage=-6.700000000000001}
 ){Coupled{ Poisson Electron Hole}}
-Plot (-Loadable FilePrefix="../plts/Vgs_0.00")
-Save (FilePrefix="../savs/Vgs_0.00")
+Plot (-Loadable FilePrefix="../plts/Vgs_0.15")
+Save (FilePrefix="../savs/Vgs_0.15")
 }
 
 
